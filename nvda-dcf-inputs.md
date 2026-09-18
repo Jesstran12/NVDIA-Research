@@ -14,7 +14,34 @@ All dollar values are USD millions unless noted otherwise. Filing data is from N
 
 ## Market Price
 
-NVDA: **$218.07 per share** on **September 10, 2026** (reported closing/last price). Source: [Investing.com historical data](https://www.investing.com/equities/nvidia-corp-historical-data?symbol=NVDA). This market price is recorded for comparison only and is not an input to the current `dcf.py` script.
+NVDA: **$195.56 per share** on **February 25, 2026** (reported closing/last price). Source: [Nasdaq historical-data extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv). This price matches the report's valuation date and is recorded for comparison only; it is not an input to the current `dcf.py` script.
+
+## Peer P/E source table
+
+**Frozen convention.** For every company, use Nasdaq's February 25, 2026 closing/last price and the latest **GAAP full-year diluted EPS publicly available on or before February 25, 2026**. The price numerator and EPS denominator are therefore not a forward-P/E convention. The `peer_valuation.py` model uses only the two candidates marked *included (qualified)* below.
+
+| Candidate | Disposition | Price on Feb. 25, 2026 | GAAP diluted EPS used | Earnings period / availability | Reason and limitation | Sources |
+|---|---|---:|---:|---|---|---|
+| NVIDIA (NVDA) | Target | $195.56 | $4.90 | FY2026 ended Jan. 25, 2026; reported Feb. 25, 2026 | Target. FY diluted EPS is a trailing earnings measure, not a point-in-time share count. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [NVIDIA FY2026 results](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/) |
+| Advanced Micro Devices (AMD) | Included (qualified) | $210.86 | $2.65 | FY2025; reported Feb. 3, 2026 | Competes in data-center CPUs and AI accelerators. Qualified because its client, gaming, and embedded businesses make its earnings mix broader than NVIDIA's. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [AMD FY2025 results](https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results) |
+| Broadcom (AVGO) | Included (qualified) | $332.31 | $4.77 | FY2025 ended Nov. 2, 2025; reported Dec. 11, 2025 | Supplies AI custom accelerators and networking to data centers. Qualified because infrastructure software is also a material part of its business. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Broadcom FY2025 results](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2025) |
+| Marvell Technology (MRVL) | Excluded | $80.92 | — | Latest pre-cutoff release: Q3 FY2026, reported Dec. 2, 2025 | Data-center interconnect exposure passes the business screen, but its GAAP EPS includes a pre-tax $1.8bn gain on the sale of the automotive Ethernet business. Its next full-year result was not available by the cutoff, so it fails the frozen clean, full-year GAAP-EPS rule. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Marvell Q3 FY2026 results](https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results) |
+
+## Peer Valuation Calculation Results
+
+The results below are produced by `peer_valuation.py` using the frozen February 25, 2026 Nasdaq closing prices and the latest available trailing GAAP full-year diluted EPS from the peer source table above.
+
+| Check | Result |
+|---|---:|
+| AMD P/E | 79.569811x |
+| Broadcom P/E | 69.666667x |
+| Peer median P/E | 74.618239x |
+| NVIDIA peer-implied range | $341.37–$389.89 |
+| NVIDIA at peer median | $365.63 |
+| Remove AMD: remaining AVGO estimate | $341.37 |
+| Change from two-peer midpoint | -$24.26 |
+
+Applying the peer median multiple (74.62x) to NVIDIA's FY2026 GAAP diluted EPS ($4.90) yields an implied equity value of **$365.63 per share**. In the single-peer stress test, removing AMD (the peer with the highest multiple) leaves Broadcom as the sole comparable, which yields an implied value of **$341.37 per share** (-$24.26 vs. midpoint). Both peer-implied values sit well above NVIDIA's observed market price of **$195.56** (which corresponds to an unadjusted trailing P/E of 39.91x).
 
 ## DCF Calculation Results
 
@@ -39,12 +66,12 @@ The historical starting values below are sourced from the saved NVIDIA FY2026 10
 
 This scenario analysis appears below, and does not alter, the DCF Results above. Each case uses the same sourced starting FCFF, cash, debt, and diluted-share inputs. Amounts are USD per share.
 
-| Scenario | FCFF growth, Years 1–5 | WACC | Terminal growth | Implied value per share | Difference vs. $218.07 market-price reference |
+| Scenario | FCFF growth, Years 1–5 | WACC | Terminal growth | Implied value per share | Difference vs. $195.56 market-price reference |
 |---|---|---:|---:|---:|---:|
-| Downside | 5%, 4%, 3%, 3%, 3% | 11.0% | 2.5% | $50.15 | ($167.92) |
-| Base | 8%, 6%, 5%, 4%, 3% | 10.0% | 3.0% | $64.31 | ($153.76) |
-| Upside | 15%, 12%, 10%, 8%, 6% | 8.5% | 3.0% | $101.46 | ($116.61) |
-| Bull | 20%, 20%, 20%, 20%, 20% | 8.0% | 3.0% | $165.39 | ($52.68) |
+| Downside | 5%, 4%, 3%, 3%, 3% | 11.0% | 2.5% | $50.15 | ($145.41) |
+| Base | 8%, 6%, 5%, 4%, 3% | 10.0% | 3.0% | $64.31 | ($131.25) |
+| Upside | 15%, 12%, 10%, 8%, 6% | 8.5% | 3.0% | $101.46 | ($94.10) |
+| Bull | 20%, 20%, 20%, 20%, 20% | 8.0% | 3.0% | $165.39 | ($30.17) |
 
 ### WACC and Terminal-Growth Sensitivity
 
