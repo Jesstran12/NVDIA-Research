@@ -14,7 +14,7 @@ All dollar values are USD millions unless noted otherwise. Filing data is from N
 
 ## Market Price
 
-NVDA: **$195.56 per share** on **February 25, 2026** (reported closing/last price). Source: [Nasdaq historical-data extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv). This price matches the report's valuation date and is recorded for comparison only; it is not an input to the current `dcf.py` script.
+NVDA: **$195.56 per share** on **February 25, 2026** (reported closing/last price). Source: [Nasdaq historical-data extract](src/nasdaq_historical_2026-02-25/matched_trading_date.csv). This price matches the report's valuation date and is recorded for comparison only; it is not an input to the current `dcf.py` script.
 
 ## Peer P/E source table
 
@@ -22,10 +22,10 @@ NVDA: **$195.56 per share** on **February 25, 2026** (reported closing/last pric
 
 | Candidate | Disposition | Price on Feb. 25, 2026 | GAAP diluted EPS used | Earnings period / availability | Reason and limitation | Sources |
 |---|---|---:|---:|---|---|---|
-| NVIDIA (NVDA) | Target | $195.56 | $4.90 | FY2026 ended Jan. 25, 2026; reported Feb. 25, 2026 | Target. FY diluted EPS is a trailing earnings measure, not a point-in-time share count. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [NVIDIA FY2026 results](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/) |
-| Advanced Micro Devices (AMD) | Included (qualified) | $210.86 | $2.65 | FY2025; reported Feb. 3, 2026 | Competes in data-center CPUs and AI accelerators. Qualified because its client, gaming, and embedded businesses make its earnings mix broader than NVIDIA's. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [AMD FY2025 results](https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results) |
-| Broadcom (AVGO) | Included (qualified) | $332.31 | $4.77 | FY2025 ended Nov. 2, 2025; reported Dec. 11, 2025 | Supplies AI custom accelerators and networking to data centers. Qualified because infrastructure software is also a material part of its business. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Broadcom FY2025 results](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2025) |
-| Marvell Technology (MRVL) | Excluded | $80.92 | — | Latest pre-cutoff release: Q3 FY2026, reported Dec. 2, 2025 | Data-center interconnect exposure passes the business screen, but its GAAP EPS includes a pre-tax $1.8bn gain on the sale of the automotive Ethernet business. Its next full-year result was not available by the cutoff, so it fails the frozen clean, full-year GAAP-EPS rule. | [Nasdaq extract](data/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Marvell Q3 FY2026 results](https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results) |
+| NVIDIA (NVDA) | Target | $195.56 | $4.90 | FY2026 ended Jan. 25, 2026; reported Feb. 25, 2026 | Target. FY diluted EPS is a trailing earnings measure, not a point-in-time share count. | [Nasdaq extract](src/nasdaq_historical_2026-02-25/matched_trading_date.csv); [NVIDIA FY2026 results](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/) |
+| Advanced Micro Devices (AMD) | Included (qualified) | $210.86 | $2.65 | FY2025; reported Feb. 3, 2026 | Competes in data-center CPUs and AI accelerators. Qualified because its client, gaming, and embedded businesses make its earnings mix broader than NVIDIA's. | [Nasdaq extract](src/nasdaq_historical_2026-02-25/matched_trading_date.csv); [AMD FY2025 results](https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results) |
+| Broadcom (AVGO) | Included (qualified) | $332.31 | $4.77 | FY2025 ended Nov. 2, 2025; reported Dec. 11, 2025 | Supplies AI custom accelerators and networking to data centers. Qualified because infrastructure software is also a material part of its business. | [Nasdaq extract](src/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Broadcom FY2025 results](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2025) |
+| Marvell Technology (MRVL) | Excluded | $80.92 | — | Latest pre-cutoff release: Q3 FY2026, reported Dec. 2, 2025 | Data-center interconnect exposure passes the business screen, but its GAAP EPS includes a pre-tax $1.8bn gain on the sale of the automotive Ethernet business. Its next full-year result was not available by the cutoff, so it fails the frozen clean, full-year GAAP-EPS rule. | [Nasdaq extract](src/nasdaq_historical_2026-02-25/matched_trading_date.csv); [Marvell Q3 FY2026 results](https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results) |
 
 ## Peer Valuation Calculation Results
 
@@ -45,7 +45,7 @@ Applying the peer median multiple (74.62x) to NVIDIA's FY2026 GAAP diluted EPS (
 
 ## DCF Calculation Results
 
-The historical starting values below are sourced from the saved NVIDIA FY2026 10-K materials in `nvda-20260125_files` (as documented in the input table above). The five growth rates, 10.0% WACC, and 3.0% terminal-growth rate are model assumptions, so the outputs are an illustrative valuation rather than a filing-reported result. Dollar amounts are USD millions except per-share amounts.
+The historical starting values below are sourced from the saved NVIDIA FY2026 10-K materials in `src/10-K_FY2026/` (as documented in the input table above). The five growth rates, 10.0% WACC, and 3.0% terminal-growth rate are model assumptions, so the outputs are an illustrative valuation rather than a filing-reported result. Dollar amounts are USD millions except per-share amounts.
 
 | Title | Result |
 |---|---:|
