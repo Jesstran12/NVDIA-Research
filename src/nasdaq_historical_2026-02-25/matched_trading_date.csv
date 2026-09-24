@@ -1,0 +1,5 @@
+ticker,role,trading_date,close_last,volume,open,high,low,source
+NVDA,target,2026-02-25,195.56,250637100,194.45,197.6299,193.79,Nasdaq Market Activity historical data
+AMD,peer,2026-02-25,210.86,44588060,214.82,216.70,210.33,Nasdaq Market Activity historical data
+AVGO,peer,2026-02-25,332.31,20182310,330.74,335.91,329.28,Nasdaq Market Activity historical data
+MRVL,peer,2026-02-25,80.92,10524690,79.01,81.188,78.97,Nasdaq Market Activity historical data
