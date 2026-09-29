@@ -121,7 +121,7 @@ Filings, all saved in [`src/`](src/): the 10-K for the year ended 28 Jan 2024 (a
 
 | Assumption | Value | Label | Reason |
 |---|---|---|---|
-| Cost of equity | 12.0% | judgment | Above the tutorial's round 10%: `beta.py` measures a raw beta of 2.21 (1.81 Blume-adjusted) against SPY, 60 monthly returns to Sep 2026, so a CAPM at ~4% + 1.81 × 5% is ~13%. 12% sits between the round number and the measured one; next week's what-if reruns the model at the measured rates |
+| Cost of equity | 12.0% | judgment | Above the tutorial's round 10%: `beta.py` measures a raw beta of 2.21 (1.81 Blume-adjusted) against SPY, 60 monthly returns to Sep 2026, so a CAPM at ~4% + 1.81 × 5% is ~13%. 12% sits between the round number and the measured one |
 | Terminal growth | 3.0% | judgment | long-run nominal growth; must stay below the cost of equity |
 | Shares outstanding | 24,100 million | fact | 10-Q cover, 21 Aug 2026 (accession 0001045810-26-000075), filed to the nearest 0.1bn (±0.2% on value per share); 24,304 million at FY2026 year-end, buybacks since |
 
@@ -222,11 +222,11 @@ The gap is exactly the year's change in cash (FCFE 201,760 less the 95% paid out
 
 ### V.3 The model and the market
 
-The model says **$123.05**; the market says **$225.51**, the close on 23 September 2026 (the latest row in the Nasdaq historical data cached in [`src/beta_prices/`](src/beta_prices/), file `NVDA_2021-09-24_2026-09-24_nasdaq_historical_raw.json`), on the same 24.1 billion shares. No recommendation; a question: which of the twenty-two assumptions would have to be wrong, and by how much, for $225 to be right? The two judgments the gap most likely sits in are the growth path after FY2028 and the cost of equity. Next week's what-if takes them apart one at a time.
+The model says **$123.05**; the market says **$225.51**, the close on 23 September 2026 (the latest row in the Nasdaq historical data cached in [`src/beta_prices/`](src/beta_prices/), file `NVDA_2021-09-24_2026-09-24_nasdaq_historical_raw.json`), on the same 24.1 billion shares. No recommendation; a question: which of the twenty-two assumptions would have to be wrong, and by how much, for $225 to be right? The two judgments the gap most likely sits in are the growth path after FY2028 and the cost of equity. Lab 11 ([`nvda-sensitivity.md`](nvda-sensitivity.md)) tests the growth path one input at a time; the cost of equity remains a judgment and is not tested there.
 
 ## What has changed since the opening balance sheet (challenges, not yet replacements)
 
-- **$24.9 billion of new notes** were issued in Q2 FY2027 (long-term debt 32,366 at 26 Jul 2026, up from 7,469). The base case keeps the FY2026 ladder; adding the notes raises interest expense by roughly $1 billion a year and cash by $25 billion, a wash for FCFE except the spread. A what-if for next week.
+- **$24.9 billion of new notes** were issued in Q2 FY2027 (long-term debt 32,366 at 26 Jul 2026, up from 7,469). The base case keeps the FY2026 ladder; adding the notes raises interest expense by roughly $1 billion a year and cash by $25 billion, a wash for FCFE except the spread. Not modelled; a limitation of the base case.
 - **Distributions accelerated:** ~$46 billion returned in H1 FY2027 and the quarterly dividend rose from $0.01 to $0.25. The 95% payout above assumes distributions keep rising with cash flow.
 - **Equity-stake gains** of $23.7 billion in H1 FY2027 are excluded on purpose; they are also why H1 GAAP net income (118,010) overstates operating earnings.
 - **Two-platform reporting** (Data Center and Edge Computing) replaced the five market platforms from Q1 FY2027; the Data Center growth ratios above use the old definitions from the 10-K.
