@@ -50,7 +50,7 @@ revolver_limit = 25000.0                              # history — commercial p
 rate_cash, rate_debt, rate_revolver = 0.035, 259.0 / 8463.0, 0.045   # judgment 3.5% on cash+securities (FY26 ÷ opening 5.3%, H1 FY27 ~3.3%); history 3.06% on notes; judgment on CP
 
 # Valuation assumptions.
-cost_of_equity  = 0.12      # judgment — above the tutorial's 10%: beta.py measures 2.21 raw / 1.81 adjusted; a CAPM at ~4% + 1.81 × 5% gives ~13%; Week 6 tests it
+cost_of_equity  = 0.12      # judgment — above the tutorial's 10%: beta.py measures 2.21 raw / 1.81 adjusted; a CAPM at ~4% + 1.81 × 5% gives ~13%; next week's what-if reruns it at the measured rates
 terminal_growth = 0.03      # judgment — long-run nominal growth, below the cost of equity
 SHARES          = 24100.0   # fact — 10-Q cover, shares outstanding at 21 Aug 2026, millions (filed to the nearest 0.1bn)
 

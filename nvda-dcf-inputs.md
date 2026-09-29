@@ -45,7 +45,7 @@ Applying the peer median multiple (74.62x) to NVIDIA's FY2026 GAAP diluted EPS (
 
 ## DCF Calculation Results
 
-The historical starting values below are sourced from the saved NVIDIA FY2026 10-K materials in `src/10-K_FY2026/` (as documented in the input table above). The five growth rates, 10.0% WACC, and 3.0% terminal-growth rate are model assumptions, so the outputs are an illustrative valuation rather than a filing-reported result. Dollar amounts are USD millions except per-share amounts.
+The historical starting values below are sourced from the saved NVIDIA FY2026 10-K materials in `src/10-K NVIDIA FY2026.htm` (as documented in the input table above). The five growth rates, 10.0% WACC, and 3.0% terminal-growth rate are model assumptions, so the outputs are an illustrative valuation rather than a filing-reported result. Dollar amounts are USD millions except per-share amounts.
 
 | Title | Result |
 |---|---:|
