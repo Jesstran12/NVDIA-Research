@@ -9,7 +9,7 @@ Items marked _[fill in]_ are recorded live in class; they are left blank rather 
 
 ## How NVIDIA makes money
 
-NVIDIA designs accelerated-computing chips and systems (GPUs, networking and full data-center racks) together with the CUDA software that developers build on. It is fabless: it designs the chips and outsources manufacturing to foundries such as TSMC, so it needs little capital of its own (capex was 2.8% of revenue in FY2026).
+NVIDIA designs accelerated-computing chips and systems (GPUs, networking and full data-center racks) together with the CUDA software that developers build on. It is fabless: it designs the chips and outsources manufacturing to foundries such as TSMC and Samsung (FY2026 10-K, Item 1, "Manufacturing", p. 8), so it needs little capital of its own (capex was 2.8% of revenue in FY2026).
 
 | FY2026 (year ended 25 Jan 2026), USD millions | Value | Source |
 |---|---:|---|
@@ -21,7 +21,7 @@ NVIDIA designs accelerated-computing chips and systems (GPUs, networking and ful
 | Two largest direct customers | 22% + 14% of revenue | MD&A p. 41 |
 
 - **Data Center is the business.** Cloud providers and AI companies buy NVIDIA systems to train and run AI models, so revenue follows their capex budgets.
-- **Pricing power comes from CUDA.** Software lock-in lets NVIDIA charge high prices, which is why gross margin stays above 70%.
+- **Pricing power comes from CUDA.** The 10-K describes CUDA as the foundational development platform that runs on all NVIDIA GPUs, and says the large and growing number of developers strengthens its ecosystem and the value of its platform (Item 1, p. 4; full-stack software platform, p. 6). That CUDA lock-in is why gross margin stays above 70% is my judgment, not a filing claim.
 - **The risk is concentration.** Two customers are 36% of revenue, and supply commitments of $95.2bn (Note 12) say NVIDIA is betting that demand continues.
 - **Reporting change:** from Q1 FY2027, NVIDIA reports two platforms (Data Center and Edge Computing) instead of five; my history uses the 10-K's five-platform figures.
 
