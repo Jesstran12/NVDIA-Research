@@ -7,6 +7,24 @@ Items marked _[fill in]_ are recorded live in class; they are left blank rather 
 
 **Why I chose NVIDIA:** Over the summer I interned in commodity operations and saw how volatile copper prices were. Commodity houses do not file 10-Ks, so I looked for a public company tied to the same demand. Copper is a key input for AI data centers, which are being built now, and NVIDIA is a large company at the centre of that build-out, developing and funding it. NVIDIA let me follow the AI data-center theme through audited filings. My initial view was watch / defer: strong operating results, but no evidence yet that the price offered an adequate return.
 
+## How NVIDIA makes money
+
+NVIDIA designs accelerated-computing chips and systems (GPUs, networking and full data-center racks) together with the CUDA software that developers build on. It is fabless: it designs the chips and outsources manufacturing to foundries such as TSMC, so it needs little capital of its own (capex was 2.8% of revenue in FY2026).
+
+| FY2026 (year ended 25 Jan 2026), USD millions | Value | Source |
+|---|---:|---|
+| Revenue | 215,938 | FY2026 10-K, income statement p. 51 |
+| Data Center revenue | 193,737 (~90%) | Note 17, revenue by market platform |
+| Other platforms (Gaming, Professional Visualization, Automotive, OEM & Other) | 22,201 (~10%) | revenue less Data Center |
+| Gross margin | 71.1% (73.2% excluding the $4.5bn H20 export charge) | income statement; MD&A p. 41 |
+| Operating margin | 60.4% | income statement |
+| Two largest direct customers | 22% + 14% of revenue | MD&A p. 41 |
+
+- **Data Center is the business.** Cloud providers and AI companies buy NVIDIA systems to train and run AI models, so revenue follows their capex budgets.
+- **Pricing power comes from CUDA.** Software lock-in lets NVIDIA charge high prices, which is why gross margin stays above 70%.
+- **The risk is concentration.** Two customers are 36% of revenue, and supply commitments of $95.2bn (Note 12) say NVIDIA is betting that demand continues.
+- **Reporting change:** from Q1 FY2027, NVIDIA reports two platforms (Data Center and Edge Computing) instead of five; my history uses the 10-K's five-platform figures.
+
 ## Route and evidence shown
 
 | Stop | File |
