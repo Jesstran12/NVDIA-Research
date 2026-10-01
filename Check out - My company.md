@@ -18,6 +18,17 @@ Items marked _[fill in]_ are recorded live in class; they are left blank rather 
 | Sensitivity | [`nvda-sensitivity.md`](nvda-sensitivity.md), [`nvda_sensitivity.py`](nvda_sensitivity.py) — growth span $32.89 vs gross margin $12.65 |
 | Interpretation | kill triggers in [`archive/nvda-whatif.md`](archive/nvda-whatif.md) §2 |
 
+**My three valuation files (all NVIDIA; not averaged):**
+
+| File | What it is | Result |
+|---|---|---|
+| [`dcf.py`](dcf.py) / [`nvda-dcf-inputs.md`](nvda-dcf-inputs.md) | Early first-pass FCFF DCF: FY2026 FCFF, placeholder growth 8/6/5/4/3%, 10% WACC, 3% terminal; cash and debt bridge | $64.31 per diluted share (USD, 24,514m shares) vs $195.56 on 25 Feb 2026 |
+| [`peer_valuation.py`](peer_valuation.py) | Trailing GAAP P/E of AMD and AVGO applied to NVIDIA's $4.90 EPS | $341–$390 per share, 25 Feb 2026 |
+| [`nvda_proforma.py`](nvda_proforma.py) | Final model: three-statement pro-forma, FCFE at 12% / 3% | **$123.05** per share (USD, 24.1bn shares) vs $225.51 on 23 Sep 2026 |
+| [`archive/nvda_whatif.py`](archive/nvda_whatif.py) | Reverse DCF on the pro-forma: holds other inputs at base and solves for the $227.38 price (21 Sep 2026) | Implied cost of equity 7.93%, or terminal growth 7.82%, or ~24pp more growth a year |
+
+Why they differ: the early DCF starts from FY2026 and uses placeholder growth, so it misses the FY2027 revenue jump; the pro-forma builds that jump in from guidance. Peer P/E uses AMD and AVGO's elevated trailing multiples, so it tells me what the market pays for AI-chip earnings, not what the cash flows support. The pro-forma is my supported value; the others are cross-checks.
+
 ## Questions received and my answers
 
 | Area | Question from my partner | My answer / unresolved gap |
