@@ -12,12 +12,19 @@ Standard library only. Charts are written as SVG to charts/. Every number comes 
 a full rerun of the five-year statements; the balance and cash-floor checks run on
 every case, and a case that fails them is reported as "not valued", never patched.
 
-Usage: python3 nvda_whatif.py            (from the NVDIA-Research folder)
+Usage: python3 archive/nvda_whatif.py    (from any folder)
 Learning demonstration, not investment advice. USD millions unless stated.
 """
 import copy
 import datetime as dt
 import os
+import sys
+
+# This script lives in archive/; the engine, beta.py and src/ live one folder up.
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, ROOT)
+os.chdir(ROOT)
 
 import nvda_proforma as m
 from beta import compute_beta
@@ -26,7 +33,7 @@ PRICE = 227.38                 # Nasdaq close, 21 Sep 2026 (src/beta_prices cach
 PRICE_DATE = '21 Sep 2026'
 RF, ERP = 0.05, 0.0442         # course convention: 10-year Treasury 5.00%, implied equity risk premium 4.42% (July 2026)
 AS_OF = dt.date(2026, 9, 24)   # end of the beta windows cached in src/beta_prices
-CHART_DIR = 'charts'
+CHART_DIR = os.path.join(HERE, 'charts')
 
 KEYS = ['growth', 'gross_margin', 'opex_ratio', 'da_ratio', 'sbc_ratio', 'capex_ratio', 'tax_rate',
         'other_income', 'ar_days', 'inventory_days', 'ap_days', 'accrued_ratio', 'min_cash',
