@@ -1,0 +1,57 @@
+NVIDIA pro-forma — one-at-a-time sensitivity (USD millions; value per share in USD)
+Base: FY2031E operating income 359,021.2 | FY2031E FCFE 307,655.6 | value per share $123.05 | checks pass (largest check residual 0.000)
+Base growth path: 85.6% / 25.0% / 12.0% / 7.0% / 4.0%
+Base gross margin path: 74.5% / 73.0% / 72.0% / 71.0% / 70.0%
+
+== Revenue growth FY28-31 (AI Data Center demand): -5 / 0 / +5 pp applied to FY2028E, FY2029E, FY2030E, FY2031E; all other inputs at base
+  lower   growth        85.6% / 20.0% / 7.0% / 2.0% / -1.0%
+  base    growth        85.6% / 25.0% / 12.0% / 7.0% / 4.0%
+  higher  growth        85.6% / 30.0% / 17.0% / 12.0% / 9.0%
+
+case        shift  FY31 op income     change    FY31 FCFE     change   $/share   change  checks
+-----------------------------------------------------------------------------------------------
+lower        -5pp       298,796.3  -60,224.8    260,739.2  -46,916.4    107.55   -15.50  pass
+base         +0pp       359,021.2       +0.0    307,655.6       +0.0    123.05    +0.00  pass
+higher       +5pp       427,906.2  +68,885.1    360,696.3  +53,040.7    140.44   +17.39  pass
+
+  trace (USD millions)                 lower          base        higher
+  FY2028E revenue                  480,937.1     500,976.2     521,015.2
+  FY2031E revenue                  519,645.8     624,384.6     744,184.8
+  FY2031E gross profit             363,752.1     437,069.2     520,929.3
+  FY2031E opex                      64,955.7      78,048.1      93,023.1
+  FY2031E operating income         298,796.3     359,021.2     427,906.2
+  FY2031E net income               251,096.5     301,173.2     358,443.0
+  FY2031E working-capital build         265.7       4,353.8       9,556.6
+  FY2031E FCFE                     260,739.2     307,655.6     360,696.3
+
+  span (max - min over valid runs): op income 129,109.9 | FCFE 99,957.1 | $/share 32.89
+
+== Gross margin FY27-31 (CUDA pricing power): -3 / 0 / +3 pp applied to FY2027E, FY2028E, FY2029E, FY2030E, FY2031E; all other inputs at base
+  lower   gross_margin  71.5% / 70.0% / 69.0% / 68.0% / 67.0%
+  base    gross_margin  74.5% / 73.0% / 72.0% / 71.0% / 70.0%
+  higher  gross_margin  77.5% / 76.0% / 75.0% / 74.0% / 73.0%
+
+case        shift  FY31 op income     change    FY31 FCFE     change   $/share   change  checks
+-----------------------------------------------------------------------------------------------
+lower        -3pp       340,289.6  -18,731.5    291,895.1  -15,760.5    116.73    -6.33  pass
+base         +0pp       359,021.2       +0.0    307,655.6       +0.0    123.05    +0.00  pass
+higher       +3pp       377,752.7  +18,731.5    323,416.1  +15,760.5    129.38    +6.33  pass
+
+  trace (USD millions)                 lower          base        higher
+  FY2028E revenue                  500,976.2     500,976.2     500,976.2
+  FY2031E revenue                  624,384.6     624,384.6     624,384.6
+  FY2031E gross profit             418,337.7     437,069.2     455,800.8
+  FY2031E opex                      78,048.1      78,048.1      78,048.1
+  FY2031E operating income         340,289.6     359,021.2     377,752.7
+  FY2031E net income               285,546.4     301,173.2     316,800.0
+  FY2031E working-capital build       4,487.4       4,353.8       4,220.1
+  FY2031E FCFE                     291,895.1     307,655.6     323,416.1
+
+  span (max - min over valid runs): op income 37,463.1 | FCFE 31,521.0 | $/share 12.65
+
+== Output spans over these ranges (a wider input range gives a wider span)
+driver                                               op income        FCFE   $/share
+Revenue growth FY28-31 (AI Data Center demand)       129,109.9    99,957.1     32.89
+Gross margin FY27-31 (CUDA pricing power)             37,463.1    31,521.0     12.65
+
+== Restored base: inputs identical True; op income 359,021.2, FCFE 307,655.6, $123.05; largest difference from first run 0.000000 -> PASS (tolerance 0.5)

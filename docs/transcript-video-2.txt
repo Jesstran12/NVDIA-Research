@@ -1,0 +1,16 @@
+PROJECT: FIN 43900 Project 1 — NVIDIA (NVDA) pro-forma valuation workbench
+STUDENT: [fill in]
+VIDEO: 2 Codebase Walkthrough
+STABLE VIDEO ID/URL: [fill in]
+TITLE: [fill in — matches the manifest]
+DURATION: [fill in mm:ss]
+REPOSITORY COMMIT/FROZEN VERSION: [fill in]
+
+[00:00] Speaker: Corrected transcript begins.
+
+[Paste the platform transcript here after recording. Correct finance terms, tickers (NVDA, AMD, AVGO), names,
+speaker attribution and material numbers (e.g. $123.93 base, $80.31 low, $186.63 high, $225.51 price,
++23.7 pp implied growth, WACC 11.99%). Filler words need not be perfect. Add a timestamp at each required
+evidence moment listed in docs/video/video-2-plan.md.]
+
+END OF CORRECTED TRANSCRIPT

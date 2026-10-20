@@ -1,0 +1,6 @@
+# Project 1 — NVIDIA pro-forma workbench. The engine (engine.py, nvda_proforma.py, analysis.py)
+# needs only the Python standard library. These packages are for the interface and the tests.
+pandas>=2.2,<3
+numpy>=1.26,<3
+streamlit>=1.49,<2
+pytest>=8,<10

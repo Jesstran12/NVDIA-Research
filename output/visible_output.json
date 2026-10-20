@@ -1,0 +1,174 @@
+{
+  "decision": "Do not initiate at this price; keep on watch \u2014 NVIDIA (NVDA) for the buy-side investment committee (no current position)",
+  "as_of": "2026-09-23",
+  "price": 225.51,
+  "currency": "USD",
+  "units": "USD millions; per-share values in USD",
+  "share_basis": "24,100m shares outstanding (10-Q cover, 21 Aug 2026) + 95m dilutive award increment (Q2 FY2027 Note 4) = 24,195m diluted",
+  "recommendation": "Do not initiate at this price; keep on watch: value per share $80 (low) / $124 (base) / $187 (high) against $225.51. Initiate only if the price falls below the base case ($124) with the checks still passing, or if two quarterly reports move the growth path enough to lift the high case above the price. Hold the watch posture while Data Center revenue keeps growing quarter on quarter and gross margin guidance stays at or above 72%.",
+  "reversal_trigger": "Data Center revenue, quarter on quarter: any decline (next two quarterly reports (Nov 2026, Feb 2027)) \u2192 withdraw the base case and rebuild as the low case (about $80); Gross margin guidance: below 72% and falling (next two quarterly reports) \u2192 move the gross-margin path down 3 pp (about -$12 at base); Operating expenses vs revenue: opex growing faster than revenue for two quarters (next two quarterly reports) \u2192 opex path +2 pp (about -$5 at base); Enterprise-to-equity bridge: fails to reconcile after the next 10-Q (new debt, buybacks, securities) (each filing) \u2192 reject the per-share conclusion until the bridge reconciles",
+  "committee_ask": "Approve watch/defer: no position now; authorise a re-review within one week of the Q3 FY2027 report with the tool re-run on the new filing.",
+  "monitoring_owner": "the analyst (this tool re-run on each filing); sector analysts own the demand view",
+  "per_share_base": 123.92893425826256,
+  "range_low": 80.31262482680809,
+  "range_high": 186.63269857417922,
+  "upside_base": -0.45045038242977,
+  "wacc": 0.11985102131792735,
+  "terminal_growth": 0.03,
+  "terminal_share": 0.6763928112647959,
+  "enterprise_value": 2944372.5643786625,
+  "equity_value": 2998460.5643786625,
+  "diluted_shares": 24195.0,
+  "bridge": {
+    "as_of": "2026-01-25",
+    "cash_and_marketable_debt": 49670.0,
+    "marketable_equity": 12886.0,
+    "debt": 8468.0
+  },
+  "fcfe_cross_check": 123.05302268033056,
+  "checks": {
+    "Every driver inside its defended bounds": "pass",
+    "Balance sheet balances every year": "pass",
+    "Cash flow ties to balance-sheet cash": "pass",
+    "PP&E roll-forward": "pass",
+    "Debt roll-forward": "pass",
+    "Base year reconciles to the FY2026 10-K": "pass",
+    "Cash stays above the 8,000 floor without the commercial-paper backstop": "pass",
+    "Terminal growth below the discount rate": "pass",
+    "Bridge balance sheet dated at the start of the projected cash flows": "pass",
+    "Explicit FCFF positive in every year": "pass",
+    "Enterprise-to-equity bridge reconciles": "pass",
+    "Terminal share of enterprise value below 85%": "pass",
+    "gross margin inside the historical band": "pass",
+    "opex ratio inside the historical band": "pass",
+    "tax rate inside the historical band": "pass",
+    "capex ratio inside the historical band": "pass",
+    "sbc ratio inside the historical band": "pass",
+    "No projected year with revenue below the FY2026 base": "pass"
+  },
+  "checks_failed": [],
+  "cases": [
+    {
+      "name": "Low \u2014 AI capex digestion and custom-silicon share loss",
+      "per_share": 80.31262482680809
+    },
+    {
+      "name": "Base \u2014 Lab 10 assumption set",
+      "per_share": 123.92893425826256
+    },
+    {
+      "name": "High \u2014 the compute cycle keeps compounding and CUDA holds price",
+      "per_share": 186.63269857417922
+    }
+  ],
+  "sensitivity_ranking": [
+    {
+      "driver": "Revenue growth FY2028E-FY2031E, shift (pp)",
+      "span_per_share": 169.80741477599446
+    },
+    {
+      "driver": "Cost of equity",
+      "span_per_share": 100.76799127858997
+    },
+    {
+      "driver": "Gross margin, shift (pp, all years)",
+      "span_per_share": 35.62219996770604
+    },
+    {
+      "driver": "Terminal growth after FY2031E",
+      "span_per_share": 33.60856268345057
+    },
+    {
+      "driver": "FY2027E revenue vs base (Q4 judgment), %",
+      "span_per_share": 24.005473698065913
+    },
+    {
+      "driver": "Operating expenses / revenue, shift (pp, all years)",
+      "span_per_share": 16.34899491850186
+    },
+    {
+      "driver": "Tax rate (all years)",
+      "span_per_share": 13.02363396063231
+    },
+    {
+      "driver": "Stock-based compensation / revenue",
+      "span_per_share": 11.079891134526818
+    },
+    {
+      "driver": "Capital spending / revenue",
+      "span_per_share": 3.625540303181168
+    }
+  ],
+  "reverse_dcf": {
+    "growth_shift": {
+      "solved": 0.2371899211257863,
+      "within_defended_bounds": true
+    },
+    "cost_of_equity": {
+      "solved": 0.07963137448796484,
+      "within_defended_bounds": false
+    },
+    "terminal_growth": {
+      "solved": 0.07776766381157171,
+      "within_defended_bounds": false
+    },
+    "gross_margin_shift": {
+      "solved": null,
+      "within_defended_bounds": false
+    },
+    "opex_shift": {
+      "solved": null,
+      "within_defended_bounds": false
+    }
+  },
+  "comps": {
+    "nvda_pe": 28.509481668773702,
+    "nvda_ev_ebit": 27.389403732178014,
+    "peers": [
+      {
+        "ticker": "AMD",
+        "pe": 157.59230769230768,
+        "ev_ebit": 153.12121759401973,
+        "disposition": "included (qualified)"
+      },
+      {
+        "ticker": "AVGO",
+        "pe": 45.27933673469388,
+        "ev_ebit": 40.4081588662587,
+        "disposition": "included (qualified)"
+      },
+      {
+        "ticker": "MRVL",
+        "pe": null,
+        "ev_ebit": null,
+        "disposition": "excluded"
+      }
+    ],
+    "implied": [
+      {
+        "ticker": "AMD",
+        "pe_implied": null,
+        "ev_ebit_implied": null
+      },
+      {
+        "ticker": "AVGO",
+        "pe_implied": 358.1595535714286,
+        "ev_ebit_implied": 332.2416440098145
+      }
+    ]
+  },
+  "limitations": [
+    "The model values the equity at the pro-forma opening date (25 Jan 2026) with all FY2027E cash flows ahead; the 23 Sep 2026 price is eight months later. Rolling the value forward at the cost of equity would add about 8% before the distributions paid since (about 1% of value).",
+    "FY2027E is a 53-week year (14-week Q4); the base carries the extra week into later years (about -$2 per share if normalised).",
+    "SBC is added back as a non-cash charge; the toggle shows the cash-cost alternative.",
+    "The $24.9bn of notes issued in June 2026 sit outside the opening balance sheet; they change the bridge only through timing, which the consistent (Jan 2026) bridge avoids.",
+    "Peer multiples use trailing GAAP figures; both peers carry large acquired-intangible amortisation, which depresses their GAAP earnings and inflates their multiples."
+  ],
+  "run": {
+    "timestamp": "2026-10-19T21:04:07-04:00",
+    "commit": "c1be843",
+    "python": "3.13.5",
+    "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
+  },
+  "source_map": "output/visible_output.md and docs/evidence-ledger.csv"
+}

@@ -1,0 +1,1253 @@
+{
+ "decision": {
+  "user": "Buy-side investment committee; the fund holds no position in NVIDIA",
+  "role": "AI task-force analyst embedded in the sector analyst group",
+  "question": "Initiate a position, place the name on watch/defer, or do not initiate, at the 23 Sep 2026 price",
+  "horizon": "Three- to five-year holding period; next review after the Q3 and Q4 FY2027 reports (Nov 2026, Feb 2027)",
+  "target": "NVIDIA Corporation common stock (NASDAQ: NVDA)",
+  "valuation_date": "2026-09-23",
+  "currency": "USD",
+  "units": "USD millions; per-share values in USD",
+  "share_basis": "24,100m shares outstanding (10-Q cover, 21 Aug 2026) + 95m dilutive award increment (Q2 FY2027 Note 4) = 24,195m diluted",
+  "exclusions": [
+   "Equity-stake gains (9.0bn in FY2026, 23.7bn in H1 FY2027) are not forecast: a gain is not a cash flow.",
+   "Non-marketable equity securities (22.3bn at FY2026; 51.2bn at Q2 FY2027) are left out of the bridge: no observable price.",
+   "Operating leases are not treated as debt (ASC 842 lease liabilities sit in other liabilities, as NVIDIA reports them).",
+   "No transaction (M&A) multiples: no defensible control transaction for a $5tn accelerated-computing business exists.",
+   "Information after 23 Sep 2026 is not used; the model runs on filings to the Q2 FY2027 10-Q (filed 26 Aug 2026)."
+  ]
+ },
+ "target": {
+  "company": "NVIDIA Corporation",
+  "ticker": "NVDA",
+  "exchange": "NASDAQ",
+  "cik": "0001045810",
+  "currency": "USD",
+  "units": "USD millions; per-share values in USD",
+  "fiscal_year_note": "Fiscal year ends the last Sunday in January; FY2026 ended 25 Jan 2026. FY2027 has a 14-week fourth quarter (Q2 FY2027 10-Q, Note 1)."
+ },
+ "market": {
+  "price": 225.51,
+  "price_date": "2026-09-23",
+  "price_source": "Nasdaq historical close, cached in src/beta_prices/NVDA_2021-09-24_2026-09-24_nasdaq_historical_raw.json",
+  "rf": 0.05,
+  "erp": 0.0442,
+  "rf_source": "course convention: 10-year Treasury 5.00%, implied equity risk premium 4.42% (July 2026), Week 5 tutorial"
+ },
+ "shares": {
+  "outstanding": 24100.0,
+  "outstanding_source": "10-Q cover, shares outstanding at 21 Aug 2026 (accession 0001045810-26-000075), to the nearest 0.1bn",
+  "basic_wavg_q2": 24190.0,
+  "diluted_wavg_q2": 24285.0,
+  "wavg_source": "Q2 FY2027 10-Q, Note 4 (net income per share), quarter ended 26 Jul 2026",
+  "diluted": 24195.0
+ },
+ "inputs": {
+  "growth_shift": 0.0,
+  "fy27_revenue_pct": 0.0,
+  "gross_margin_shift": 0.0,
+  "opex_shift": 0.0,
+  "tax_rate": 0.17,
+  "capex_ratio": 0.027980253591308617,
+  "sbc_ratio": 0.025,
+  "cost_of_equity": 0.12,
+  "terminal_growth": 0.03,
+  "sbc_as_cash_cost": false,
+  "include_marketable_equity": true,
+  "bridge_latest": false
+ },
+ "assumptions": {
+  "growth": [
+   0.8559999999999999,
+   0.25,
+   0.12,
+   0.07,
+   0.04
+  ],
+  "gross_margin": [
+   0.745,
+   0.73,
+   0.72,
+   0.71,
+   0.7
+  ],
+  "opex_ratio": [
+   0.087,
+   0.095,
+   0.105,
+   0.115,
+   0.125
+  ],
+  "sbc_ratio": 0.025,
+  "capex_ratio": 0.027980253591308617,
+  "tax_rate": 0.17,
+  "cost_of_equity": 0.12,
+  "terminal_growth": 0.03
+ },
+ "statements": [
+  {
+   "year": 2027,
+   "revenue": 400780.92799999996,
+   "gross_profit": 298581.79136,
+   "opex": 34867.940736,
+   "operating_income": 263713.85062399996,
+   "interest_income": 2189.46,
+   "interest_expense": 259.15301902398676,
+   "other_income": 0.0,
+   "pretax": 265644.157604976,
+   "tax": 45159.50679284592,
+   "net_income": 220484.65081213007,
+   "da": 5489.115232722143,
+   "sbc": 10019.5232,
+   "capex": 11213.952,
+   "receivables": 71392.896,
+   "inventory": 35011.89470197551,
+   "securities": 51951.0,
+   "ppe": 19413.836767277855,
+   "other_assets": 70689.0,
+   "payables": 16050.867206269386,
+   "accrued": 39629.31199999999,
+   "paydown": 1000.0,
+   "debt": 7468.0,
+   "other_liabilities": 9878.0,
+   "delta_wc": 22019.61149570612,
+   "fcfe": 201759.72574914608,
+   "buyback": 191671.73946168876,
+   "equity": 196125.4345504413,
+   "draw": 0.0,
+   "repay": 0.0,
+   "revolver": 0.0,
+   "cash": 20692.986287457315,
+   "total_assets": 269151.61375671066,
+   "total_liabilities_equity": 269151.61375671066,
+   "check_balance": 0.0,
+   "check_cash": 0.0,
+   "check_ppe": 0.0,
+   "check_debt": 0.0,
+   "check_floor": 0.0
+  },
+  {
+   "year": 2028,
+   "revenue": 500976.1599999999,
+   "gross_profit": 365712.59679999994,
+   "opex": 47592.735199999996,
+   "operating_income": 318119.86159999995,
+   "interest_income": 2542.5395200610064,
+   "interest_expense": 228.54921422663358,
+   "other_income": 0.0,
+   "pretax": 320433.8519058343,
+   "tax": 54473.75482399183,
+   "net_income": 265960.0970818424,
+   "da": 7784.7021056940675,
+   "sbc": 12524.403999999999,
+   "capex": 14017.439999999999,
+   "receivables": 89241.11999999998,
+   "inventory": 46339.27239967347,
+   "securities": 51951.0,
+   "ppe": 25646.57466158379,
+   "other_assets": 70689.0,
+   "payables": 21243.79483182713,
+   "accrued": 49536.63999999999,
+   "paydown": 0.0,
+   "debt": 7468.0,
+   "other_liabilities": 9878.0,
+   "delta_wc": 14075.346072140208,
+   "fcfe": 258176.41711539624,
+   "buyback": 245267.5962596264,
+   "equity": 229342.33937265727,
+   "draw": 0.0,
+   "repay": 0.0,
+   "revolver": 0.0,
+   "cash": 33601.80714322711,
+   "total_assets": 317468.7742044843,
+   "total_liabilities_equity": 317468.7742044844,
+   "check_balance": -1.1641532182693481e-10,
+   "check_cash": 0.0,
+   "check_ppe": 0.0,
+   "check_debt": 0.0,
+   "check_floor": 0.0
+  },
+  {
+   "year": 2029,
+   "revenue": 561093.2992,
+   "gross_profit": 403987.175424,
+   "opex": 58914.796416,
+   "operating_income": 345072.379008,
+   "interest_income": 2994.348250012949,
+   "interest_expense": 228.54921422663358,
+   "other_income": 0.0,
+   "pretax": 347838.1780437863,
+   "tax": 59132.49026744368,
+   "net_income": 288705.6877763426,
+   "da": 10283.950883340298,
+   "sbc": 14027.332480000001,
+   "capex": 15699.5328,
+   "receivables": 99950.0544,
+   "inventory": 53822.206757546664,
+   "securities": 51951.0,
+   "ppe": 31062.15657824349,
+   "other_assets": 70689.0,
+   "payables": 24674.274293559218,
+   "accrued": 55481.0368,
+   "paydown": 1250.0,
+   "debt": 6218.0,
+   "other_liabilities": 9878.0,
+   "delta_wc": 8816.992496141109,
+   "fcfe": 287250.4458435418,
+   "buyback": 272887.92355136474,
+   "equity": 259187.4360776351,
+   "draw": 0.0,
+   "repay": 0.0,
+   "revolver": 0.0,
+   "cash": 47964.329435404215,
+   "total_assets": 355438.74717119435,
+   "total_liabilities_equity": 355438.7471711943,
+   "check_balance": 5.820766091346741e-11,
+   "check_cash": 0.0,
+   "check_ppe": 0.0,
+   "check_debt": 0.0,
+   "check_floor": 0.0
+  },
+  {
+   "year": 2030,
+   "revenue": 600369.830144,
+   "gross_profit": 426262.57940224,
+   "opex": 69042.53046656,
+   "operating_income": 357220.04893568,
+   "interest_income": 3497.036530239148,
+   "interest_expense": 190.2944582299421,
+   "other_income": 0.0,
+   "pretax": 360526.7910076892,
+   "tax": 61289.554471307165,
+   "net_income": 299237.23653638206,
+   "da": 12455.53048687535,
+   "sbc": 15009.2457536,
+   "capex": 16798.500096,
+   "receivables": 106946.558208,
+   "inventory": 59646.53841738119,
+   "securities": 51951.0,
+   "ppe": 35405.126187368136,
+   "other_assets": 70689.0,
+   "payables": 27344.383261755094,
+   "accrued": 59364.709376,
+   "paydown": 0.0,
+   "debt": 6218.0,
+   "other_liabilities": 9878.0,
+   "delta_wc": 6267.053923638661,
+   "fcfe": 303636.45875721873,
+   "buyback": 288454.63581935776,
+   "equity": 284979.2825482594,
+   "draw": 0.0,
+   "repay": 0.0,
+   "revolver": 0.0,
+   "cash": 63146.152373265184,
+   "total_assets": 387784.3751860145,
+   "total_liabilities_equity": 387784.3751860145,
+   "check_balance": 0.0,
+   "check_cash": 0.0,
+   "check_ppe": 0.0,
+   "check_debt": 0.0,
+   "check_floor": 0.0
+  },
+  {
+   "year": 2031,
+   "revenue": 624384.6233497601,
+   "gross_profit": 437069.23634483205,
+   "opex": 78048.07791872001,
+   "operating_income": 359021.15842611203,
+   "interest_income": 4028.4003330642818,
+   "interest_expense": 190.2944582299421,
+   "other_income": 0.0,
+   "pretax": 362859.2643009463,
+   "tax": 61686.07493116088,
+   "net_income": 301173.1893697854,
+   "da": 14197.006170759887,
+   "sbc": 15609.615583744002,
+   "capex": 17470.44009984,
+   "receivables": 111224.42053632002,
+   "inventory": 64171.44822835494,
+   "securities": 51951.0,
+   "ppe": 38678.56011644825,
+   "other_assets": 70689.0,
+   "payables": 29418.784750577895,
+   "accrued": 61739.29775104,
+   "paydown": 1500.0,
+   "debt": 4718.0,
+   "other_liabilities": 9878.0,
+   "delta_wc": 4353.782275430956,
+   "fcfe": 307655.5887490184,
+   "buyback": 292272.80931156746,
+   "equity": 309489.2781902214,
+   "draw": 0.0,
+   "repay": 0.0,
+   "revolver": 0.0,
+   "cash": 78528.93181071611,
+   "total_assets": 415243.3606918393,
+   "total_liabilities_equity": 415243.3606918393,
+   "check_balance": 0.0,
+   "check_cash": 0.0,
+   "check_ppe": 0.0,
+   "check_debt": 0.0,
+   "check_floor": 0.0
+  }
+ ],
+ "fcff_rows": [
+  {
+   "year": 2027,
+   "ebit": 263713.85062399996,
+   "nopat": 218882.49601791994,
+   "da": 5489.115232722143,
+   "sbc_addback": 10019.5232,
+   "capex": 11213.952,
+   "delta_wc": 22019.61149570612,
+   "fcff": 201157.57095493597
+  },
+  {
+   "year": 2028,
+   "ebit": 318119.86159999995,
+   "nopat": 264039.485128,
+   "da": 7784.7021056940675,
+   "sbc_addback": 12524.403999999999,
+   "capex": 14017.439999999999,
+   "delta_wc": 14075.346072140208,
+   "fcff": 256255.80516155378
+  },
+  {
+   "year": 2029,
+   "ebit": 345072.379008,
+   "nopat": 286410.07457664,
+   "da": 10283.950883340298,
+   "sbc_addback": 14027.332480000001,
+   "capex": 15699.5328,
+   "delta_wc": 8816.992496141109,
+   "fcff": 286204.8326438392
+  },
+  {
+   "year": 2030,
+   "ebit": 357220.04893568,
+   "nopat": 296492.6406166144,
+   "da": 12455.53048687535,
+   "sbc_addback": 15009.2457536,
+   "capex": 16798.500096,
+   "delta_wc": 6267.053923638661,
+   "fcff": 300891.8628374511
+  },
+  {
+   "year": 2031,
+   "ebit": 359021.15842611203,
+   "nopat": 297987.56149367295,
+   "da": 14197.006170759887,
+   "sbc_addback": 15609.615583744002,
+   "capex": 17470.44009984,
+   "delta_wc": 4353.782275430956,
+   "fcff": 305969.9608729059
+  }
+ ],
+ "wacc": {
+  "equity_value_market": 5434791.0,
+  "debt": 8468.0,
+  "weight_equity": 0.9984443143344823,
+  "weight_debt": 0.0015556856655176614,
+  "cost_of_equity": 0.12,
+  "cost_of_debt_pretax": 0.0292,
+  "cost_of_debt_after_tax": 0.024236,
+  "wacc": 0.11985102131792735
+ },
+ "bridge": {
+  "balance_sheet": {
+   "as_of": "2026-01-25",
+   "label": "FY2026 10-K balance sheet (consistent with the pro-forma opening date)",
+   "source": "Form 10-K FY2026, accession 0001045810-26-000021, balance sheet p. 53; Q2 FY2027 10-Q comparative column",
+   "cash": 10605.0,
+   "marketable_debt": 39065.0,
+   "marketable_equity": 12886.0,
+   "debt": 8468.0,
+   "debt_note": "short-term 999 + long-term 7,469; Note 11 pp. 69-70",
+   "cost_of_debt": 0.0292,
+   "cost_of_debt_note": "principal-weighted effective rate of the seven note series outstanding at 25 Jan 2026 (Q2 FY2027 10-Q Note 9): 2.92%",
+   "non_marketable_equity": 22251.0,
+   "operating_leases": 0.0
+  },
+  "cash_and_marketable_debt": 49670.0,
+  "marketable_equity": 12886.0,
+  "debt": 8468.0
+ },
+ "dcf": {
+  "pv_explicit": 952820.1281476426,
+  "terminal_cash_flow": 315149.0596990931,
+  "terminal_value": 3507462.1865896764,
+  "pv_terminal": 1991552.43623102,
+  "enterprise_value": 2944372.5643786625,
+  "terminal_share": 0.6763928112647959,
+  "cash": 49670.0,
+  "other_assets": 12886.0,
+  "debt": 8468.0,
+  "equity_value": 2998460.5643786625,
+  "shares": 24195.0,
+  "per_share": 123.92893425826256
+ },
+ "fcfe_cross_check": {
+  "equity_value": 2965577.8465959663,
+  "per_share": 123.05302268033056,
+  "terminal_share": 0.6769746010457156
+ },
+ "per_share": 123.92893425826256,
+ "price": 225.51,
+ "upside": -0.45045038242977,
+ "checks": [
+  {
+   "name": "Every driver inside its defended bounds",
+   "status": "pass",
+   "detail": "all drivers inside the bounds recorded in the assumption-challenge record"
+  },
+  {
+   "name": "Balance sheet balances every year",
+   "status": "pass",
+   "detail": "largest |assets - liabilities - equity| = 0.0"
+  },
+  {
+   "name": "Cash flow ties to balance-sheet cash",
+   "status": "pass",
+   "detail": "largest tie residual = 0.0"
+  },
+  {
+   "name": "PP&E roll-forward",
+   "status": "pass",
+   "detail": "largest residual = 0.0"
+  },
+  {
+   "name": "Debt roll-forward",
+   "status": "pass",
+   "detail": "largest residual = 0.0"
+  },
+  {
+   "name": "Base year reconciles to the FY2026 10-K",
+   "status": "pass",
+   "detail": "opening balance sheet = filed totals (assets 206,803; liabilities 49,510; equity 157,293)"
+  },
+  {
+   "name": "Cash stays above the 8,000 floor without the commercial-paper backstop",
+   "status": "pass",
+   "detail": "commercial paper drawn: 0; lowest cash vs floor: +12,693"
+  },
+  {
+   "name": "Terminal growth below the discount rate",
+   "status": "pass",
+   "detail": "g = 3.00% vs WACC = 11.99%"
+  },
+  {
+   "name": "Bridge balance sheet dated at the start of the projected cash flows",
+   "status": "pass",
+   "detail": "bridge at 25 Jan 2026 = the pro-forma opening date; every FY2027E cash flow is ahead of it"
+  },
+  {
+   "name": "Explicit FCFF positive in every year",
+   "status": "pass",
+   "detail": "non-positive years: none"
+  },
+  {
+   "name": "Enterprise-to-equity bridge reconciles",
+   "status": "pass",
+   "detail": "EV 2,944,373 + cash & securities 62,556 - debt 8,468 = equity 2,998,461"
+  },
+  {
+   "name": "Terminal share of enterprise value below 85%",
+   "status": "pass",
+   "detail": "67.6% of EV sits after FY2031E"
+  },
+  {
+   "name": "gross margin inside the historical band",
+   "status": "pass",
+   "detail": "path 74.5%, 73.0%, 72.0%, 71.0%, 70.0% vs band 56.9%-78.5% (FY2023 56.9% trough (FY2024 10-K) to 78.5%, 3.5 points above the best quarter reported (75.0%, Q2 FY2027))"
+  },
+  {
+   "name": "opex ratio inside the historical band",
+   "status": "pass",
+   "detail": "path 8.7%, 9.5%, 10.5%, 11.5%, 12.5% vs band 6.5%-18.6% (the FY2027E run-rate 8.7% less 2 points (NVIDIA has never filed a year below 10.7%) to FY2024 18.6%)"
+  },
+  {
+   "name": "tax rate inside the historical band",
+   "status": "pass",
+   "detail": "path 17.0% vs band 12.0%-21.0% (FY2024 12.0% to the 21% statutory rate)"
+  },
+  {
+   "name": "capex ratio inside the historical band",
+   "status": "pass",
+   "detail": "path 2.8% vs band 1.5%-6.0% (FY2024 1.8%; MD&A says capex rises in FY2027)"
+  },
+  {
+   "name": "sbc ratio inside the historical band",
+   "status": "pass",
+   "detail": "path 2.5% vs band 1.5%-6.0% (H1 FY2027 2.2% to FY2024 5.8%)"
+  },
+  {
+   "name": "No projected year with revenue below the FY2026 base",
+   "status": "pass",
+   "detail": "lowest projected revenue 400,781 vs FY2026 215,938"
+  }
+ ],
+ "checks_failed": [],
+ "valid": true,
+ "clamped": [],
+ "cases": [
+  {
+   "name": "Low \u2014 AI capex digestion and custom-silicon share loss",
+   "story": "Hyperscalers pause after FY2027 (growth path 15 / 2 / -3 / -6 %), custom accelerators and AMD take price (gross margin -3 pp), R&D keeps rising into slower revenue (opex +1 pp), and the market demands the measured CAPM rate (13%).",
+   "inputs": {
+    "growth_shift": -0.1,
+    "gross_margin_shift": -0.03,
+    "opex_shift": 0.01,
+    "cost_of_equity": 0.13
+   },
+   "per_share": 80.31262482680809,
+   "valid": true,
+   "checks_failed": [],
+   "terminal_share": 0.6047486651777,
+   "fy2031_revenue": 428651.7948264191,
+   "fy2031_fcff": 203867.48756955264
+  },
+  {
+   "name": "Base \u2014 Lab 10 assumption set",
+   "story": "The labelled base case: growth 25 / 12 / 7 / 4 %, gross margin 74.5 -> 70 %, 12% cost of equity, 3% terminal growth.",
+   "inputs": {},
+   "per_share": 123.92893425826256,
+   "valid": true,
+   "checks_failed": [],
+   "terminal_share": 0.6763928112647959,
+   "fy2031_revenue": 624384.6233497601,
+   "fy2031_fcff": 305969.9608729059
+  },
+  {
+   "name": "High \u2014 the compute cycle keeps compounding and CUDA holds price",
+   "story": "Data Center spending compounds (growth path 35 / 22 / 17 / 14 %), pricing power holds (gross margin +1.5 pp), and the market accepts a lower required return (11%).",
+   "inputs": {
+    "growth_shift": 0.1,
+    "gross_margin_shift": 0.015,
+    "cost_of_equity": 0.11
+   },
+   "per_share": 186.63269857417922,
+   "valid": true,
+   "checks_failed": [],
+   "terminal_share": 0.7376614908040008,
+   "fy2031_revenue": 880422.9581092608,
+   "fy2031_fcff": 429752.85483160417
+  }
+ ],
+ "grid": {
+  "rates": [
+   0.1,
+   0.11,
+   0.12,
+   0.13,
+   0.14,
+   0.15
+  ],
+  "growths": [
+   0.0,
+   0.01,
+   0.02,
+   0.03,
+   0.04
+  ],
+  "cells": [
+   [
+    122.45028259240429,
+    132.07542969065574,
+    144.1104140058237,
+    159.5897648417879,
+    180.23905520241655
+   ],
+   [
+    111.03166921418841,
+    118.62765778233411,
+    127.91414992198318,
+    139.52614350463864,
+    154.4621852619849
+   ],
+   [
+    101.52786956302754,
+    107.63540962752563,
+    114.96628020660138,
+    123.92893425826256,
+    135.1364322464781
+   ],
+   [
+    93.49669604640691,
+    98.48454914639325,
+    104.38064315462378,
+    111.45789939614417,
+    120.11075972319175
+   ],
+   [
+    86.62228598720183,
+    90.7498888633323,
+    95.56645953432216,
+    101.2602064434001,
+    108.09475723533285
+   ],
+   [
+    80.67300284752532,
+    84.12771812295261,
+    88.11472915819388,
+    92.76732721266264,
+    98.26735945763049
+   ]
+  ]
+ },
+ "sensitivity": {
+  "base_per_share": 123.92893425826256,
+  "scale": 1.0,
+  "rows": [
+   {
+    "key": "growth_shift",
+    "label": "Revenue growth FY2028E-FY2031E, shift (pp)",
+    "base": 0.0,
+    "lo": {
+     "value": -0.25,
+     "per_share": 62.72835100634098,
+     "valid": true,
+     "op_income": 129877.84905048959,
+     "fcff": 123533.51512857257,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.25,
+     "per_share": 232.53576578233543,
+     "valid": true,
+     "op_income": 806399.7026209343,
+     "fcff": 642406.5079233954,
+     "failed": []
+    },
+    "span_per_share": 169.80741477599446,
+    "span_op_income": 676521.8535704447,
+    "span_fcff": 518872.9927948228
+   },
+   {
+    "key": "cost_of_equity",
+    "label": "Cost of equity",
+    "base": 0.12,
+    "lo": {
+     "value": 0.09,
+     "per_share": 186.35367352093917,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 305969.9608729059,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.16,
+     "per_share": 85.5856822423492,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 305969.9608729059,
+     "failed": []
+    },
+    "span_per_share": 100.76799127858997,
+    "span_op_income": 0.0,
+    "span_fcff": 0.0
+   },
+   {
+    "key": "gross_margin_shift",
+    "label": "Gross margin, shift (pp, all years)",
+    "base": 0.0,
+    "lo": {
+     "value": -0.13,
+     "per_share": 96.68842840060499,
+     "valid": true,
+     "op_income": 277851.1573906432,
+     "fcff": 238019.6489555038,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.04,
+     "per_share": 132.31062836831103,
+     "valid": true,
+     "op_income": 383996.54336010246,
+     "fcff": 326877.7491551835,
+     "failed": []
+    },
+    "span_per_share": 35.62219996770604,
+    "span_op_income": 106145.38596945925,
+    "span_fcff": 88858.1001996797
+   },
+   {
+    "key": "terminal_growth",
+    "label": "Terminal growth after FY2031E",
+    "base": 0.03,
+    "lo": {
+     "value": 0.0,
+     "per_share": 101.52786956302754,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 305969.9608729059,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.04,
+     "per_share": 135.1364322464781,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 305969.9608729059,
+     "failed": []
+    },
+    "span_per_share": 33.60856268345057,
+    "span_op_income": 0.0,
+    "span_fcff": 0.0
+   },
+   {
+    "key": "fy27_revenue_pct",
+    "label": "FY2027E revenue vs base (Q4 judgment), %",
+    "base": 0.0,
+    "lo": {
+     "value": -0.1,
+     "per_share": 111.92619740922962,
+     "valid": true,
+     "op_income": 323119.0425835008,
+     "fcff": 275443.6366341669,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.1,
+     "per_share": 135.93167110729553,
+     "valid": true,
+     "op_income": 394923.2742687232,
+     "fcff": 336496.285111645,
+     "failed": []
+    },
+    "span_per_share": 24.005473698065913,
+    "span_op_income": 71804.23168522242,
+    "span_fcff": 61052.64847747813
+   },
+   {
+    "key": "opex_shift",
+    "label": "Operating expenses / revenue, shift (pp, all years)",
+    "base": 0.0,
+    "lo": {
+     "value": -0.02,
+     "per_share": 128.01618298788804,
+     "valid": true,
+     "op_income": 371508.85089310724,
+     "fcff": 316334.74562051194,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.06,
+     "per_share": 111.66718806938619,
+     "valid": true,
+     "op_income": 321558.08102512645,
+     "fcff": 274875.6066300879,
+     "failed": []
+    },
+    "span_per_share": 16.34899491850186,
+    "span_op_income": 49950.769867980795,
+    "span_fcff": 41459.13899042405
+   },
+   {
+    "key": "tax_rate",
+    "label": "Tax rate (all years)",
+    "base": 0.17,
+    "lo": {
+     "value": 0.12,
+     "per_share": 131.16413825711896,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 323921.01879421156,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.21,
+     "per_share": 118.14050429648665,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 291609.1145358615,
+     "failed": []
+    },
+    "span_per_share": 13.02363396063231,
+    "span_op_income": 0.0,
+    "span_fcff": 32311.904258350085
+   },
+   {
+    "key": "sbc_ratio",
+    "label": "Stock-based compensation / revenue",
+    "base": 0.025,
+    "lo": {
+     "value": 0.015,
+     "per_share": 121.46673622836771,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 299726.1146394083,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.06,
+     "per_share": 132.54662736289453,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 327823.4226901475,
+     "failed": []
+    },
+    "span_per_share": 11.079891134526818,
+    "span_op_income": 0.0,
+    "span_fcff": 28097.30805073917
+   },
+   {
+    "key": "capex_ratio",
+    "label": "Capital spending / revenue",
+    "base": 0.027980253591308617,
+    "lo": {
+     "value": 0.015,
+     "per_share": 124.97472164805815,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 307816.3840121713,
+     "failed": []
+    },
+    "hi": {
+     "value": 0.06,
+     "per_share": 121.34918134487698,
+     "valid": true,
+     "op_income": 359021.15842611203,
+     "fcff": 301415.1961861817,
+     "failed": []
+    },
+    "span_per_share": 3.625540303181168,
+    "span_op_income": 0.0,
+    "span_fcff": 6401.187825989618
+   }
+  ]
+ },
+ "ranking_test": {
+  "full": [
+   "growth_shift",
+   "cost_of_equity",
+   "gross_margin_shift",
+   "terminal_growth",
+   "fy27_revenue_pct",
+   "opex_shift",
+   "tax_rate",
+   "sbc_ratio",
+   "capex_ratio"
+  ],
+  "half": [
+   "growth_shift",
+   "cost_of_equity",
+   "terminal_growth",
+   "gross_margin_shift",
+   "fy27_revenue_pct",
+   "opex_shift",
+   "tax_rate",
+   "sbc_ratio",
+   "capex_ratio"
+  ],
+  "lab11": [
+   "growth_shift",
+   "gross_margin_shift"
+  ],
+  "lab11_rows": [
+   {
+    "key": "growth_shift",
+    "span_per_share": 32.76808560461147,
+    "lo_per_share": 108.48704930141473,
+    "hi_per_share": 141.2551349060262
+   },
+   {
+    "key": "gross_margin_shift",
+    "span_per_share": 12.572541165072721,
+    "lo_per_share": 117.6426636757262,
+    "hi_per_share": 130.21520484079892
+   }
+  ],
+  "top_two_stable": true
+ },
+ "reverse_dcf": {
+  "growth_shift": {
+   "key": "growth_shift",
+   "target": 225.51,
+   "solved": 0.2371899211257863,
+   "reachable": true,
+   "bounds": [
+    -0.25,
+    0.25
+   ],
+   "held_fixed": [
+    "fy27_revenue_pct",
+    "gross_margin_shift",
+    "opex_shift",
+    "tax_rate",
+    "capex_ratio",
+    "sbc_ratio",
+    "cost_of_equity",
+    "terminal_growth"
+   ],
+   "within_defended_bounds": true
+  },
+  "cost_of_equity": {
+   "key": "cost_of_equity",
+   "target": 225.51,
+   "solved": 0.07963137448796484,
+   "reachable": true,
+   "bounds": [
+    0.09,
+    0.16
+   ],
+   "held_fixed": [
+    "growth_shift",
+    "fy27_revenue_pct",
+    "gross_margin_shift",
+    "opex_shift",
+    "tax_rate",
+    "capex_ratio",
+    "sbc_ratio",
+    "terminal_growth"
+   ],
+   "within_defended_bounds": false,
+   "note": "outside the defended bounds (0.09, 0.16); searched (0.04, 0.16) to report what the price assumes"
+  },
+  "terminal_growth": {
+   "key": "terminal_growth",
+   "target": 225.51,
+   "solved": 0.07776766381157171,
+   "reachable": true,
+   "bounds": [
+    0.0,
+    0.04
+   ],
+   "held_fixed": [
+    "growth_shift",
+    "fy27_revenue_pct",
+    "gross_margin_shift",
+    "opex_shift",
+    "tax_rate",
+    "capex_ratio",
+    "sbc_ratio",
+    "cost_of_equity"
+   ],
+   "within_defended_bounds": false,
+   "note": "outside the defended bounds (0.0, 0.04); searched (0.0, 0.1) to report what the price assumes"
+  },
+  "gross_margin_shift": {
+   "key": "gross_margin_shift",
+   "target": 225.51,
+   "solved": null,
+   "reachable": false,
+   "bounds": [
+    -0.15,
+    0.25
+   ],
+   "value_at_bounds": {
+    "lo": 92.49758134558073,
+    "hi": 176.31452244606555
+   },
+   "within_defended_bounds": false,
+   "note": "outside the defended bounds (-0.13, 0.04); searched (-0.15, 0.25) to report what the price assumes"
+  },
+  "opex_shift": {
+   "key": "opex_shift",
+   "target": 225.51,
+   "solved": null,
+   "reachable": false,
+   "bounds": [
+    -0.09,
+    0.06
+   ],
+   "value_at_bounds": {
+    "lo": 142.32155354157712,
+    "hi": 111.66718806938619
+   },
+   "within_defended_bounds": false,
+   "note": "outside the defended bounds (-0.02, 0.06); searched (-0.09, 0.06) to report what the price assumes"
+  }
+ },
+ "comps": {
+  "policy": {
+   "frozen": "Policy carried from Lab 7-8 (frozen 25 Feb 2026) and re-dated to the 23 Sep 2026 valuation date; the rules below were fixed before the multiples were computed.",
+   "rules": [
+    "Business test: a listed operating company whose largest profit pool is accelerated-computing silicon sold into data centers (same customers, same capex budgets).",
+    "Earnings basis: GAAP diluted EPS and GAAP operating income, trailing twelve months to the latest 10-Q filed on or before the valuation date; no adjusted figures.",
+    "Price basis: Nasdaq close on the same trading day for every company (23 Sep 2026).",
+    "Enterprise value = market capitalisation on the cover-page share count + total debt (carrying) - cash, cash equivalents and short-term investments; no leases, no equity stakes.",
+    "A multiple above 100x is reported but marked not meaningful: at that level trailing earnings are too small relative to price to say anything about NVIDIA.",
+    "Qualified peers are used, not dropped; the qualification is stated beside the result.",
+    "No transaction (M&A) evidence: no control transaction of a comparable accelerated-computing business exists; a control premium cannot be defended for a $5tn target."
+   ]
+  },
+  "peers": [
+   {
+    "ticker": "AMD",
+    "disposition": "included (qualified)",
+    "reason": "Data-center GPUs and CPUs compete for the same racks. Qualified: client, gaming and embedded segments make the earnings mix broader, and acquired-intangible amortisation (2.3bn in FY2025) depresses GAAP earnings.",
+    "price": 614.61,
+    "market_cap": 1003335.4597499999,
+    "enterprise_value": 993450.4597499999,
+    "ttm_eps": 3.9000000000000004,
+    "ttm_ebit": 6488.0,
+    "ttm_revenue": 41305.0,
+    "operating_margin": 0.15707541459871685,
+    "pe": 157.59230769230768,
+    "ev_ebit": 153.12121759401973,
+    "pe_meaningful": false,
+    "ev_ebit_meaningful": false,
+    "ttm_period": "FY2025 (10-K filed 2026-02-04) less H1 2025 plus H1 2026 (10-Q filed 2026-08-05); balance sheet 27 Jun 2026; cover shares 29 Jul 2026",
+    "source": "SEC XBRL companyfacts, CIK 0000002488; src/sec_xbrl/companyfacts_extract.csv"
+   },
+   {
+    "ticker": "AVGO",
+    "disposition": "included (qualified)",
+    "reason": "Custom AI accelerators and data-center networking. Qualified: infrastructure software (VMware) is a large part of profit, and 8bn a year of acquired-intangible amortisation depresses GAAP earnings.",
+    "price": 354.99,
+    "market_cap": 1694590.9137000002,
+    "enterprise_value": 1730034.9137000002,
+    "ttm_eps": 7.84,
+    "ttm_ebit": 42814.0,
+    "ttm_revenue": 89104.0,
+    "operating_margin": 0.4804947028191776,
+    "pe": 45.27933673469388,
+    "ev_ebit": 40.4081588662587,
+    "pe_meaningful": true,
+    "ev_ebit_meaningful": true,
+    "ttm_period": "FY2025 (10-K filed 2025-12-18) less 9M FY2025 plus 9M FY2026 (10-Q filed 2026-09-10); balance sheet 2 Aug 2026; cover shares 28 Aug 2026",
+    "source": "SEC XBRL companyfacts, CIK 0001730168; src/sec_xbrl/companyfacts_extract.csv"
+   },
+   {
+    "ticker": "MRVL",
+    "disposition": "excluded",
+    "reason": "Passes the business screen (data-center interconnect) but its GAAP earnings carry the gain on the automotive Ethernet sale; excluded under the clean-GAAP rule as in Lab 8."
+   }
+  ],
+  "nvda": {
+   "price": 225.51,
+   "market_cap": 5434791.0,
+   "enterprise_value": 5411571.0,
+   "ttm_eps": 7.91,
+   "ttm_ebit": 197579.0,
+   "ttm_revenue": 302970.0,
+   "operating_margin": 0.652140475954715,
+   "pe": 28.509481668773702,
+   "ev_ebit": 27.389403732178014,
+   "period": "four quarters to 26 Jul 2026: FY2026 10-K less H1 FY2026 plus H1 FY2027 (10-Q filed 2026-08-26)"
+  },
+  "implied": [
+   {
+    "ticker": "AMD",
+    "pe_implied": null,
+    "ev_ebit_implied": null
+   },
+   {
+    "ticker": "AVGO",
+    "pe_implied": 358.1595535714286,
+    "ev_ebit_implied": 332.2416440098145
+   }
+  ],
+  "note": "Implied values apply each peer multiple to NVIDIA's trailing GAAP EPS or EBIT; the EV multiple is bridged with the Q2 FY2027 balance sheet."
+ },
+ "drivers": [
+  {
+   "key": "growth_shift",
+   "label": "Revenue growth FY2028E-FY2031E, shift (pp)",
+   "unit": "percentage points added to each year",
+   "base": 0.0,
+   "lo": -0.25,
+   "hi": 0.25,
+   "step": 0.01,
+   "fmt": "pp",
+   "value_note": "base path 25 / 12 / 7 / 4 %",
+   "basis": "judgment",
+   "bound_reason": "-25 pp makes FY2028E flat (0%) and the later years shrink: the \"AI capex stops\" case. +25 pp is one point above the growth the market price implies (reverse DCF); nothing in the filings supports more.",
+   "challenge": "Two customers are 36% of revenue (FY2026 10-K MD&A p. 41); hyperscaler capex cannot compound at 65-85% for long.",
+   "evidence": "Data Center revenue growth in the next two quarterly reports; hyperscaler capex guidance."
+  },
+  {
+   "key": "fy27_revenue_pct",
+   "label": "FY2027E revenue vs base (Q4 judgment), %",
+   "unit": "percent of base FY2027E revenue 400,837",
+   "base": 0.0,
+   "lo": -0.1,
+   "hi": 0.1,
+   "step": 0.01,
+   "fmt": "pct",
+   "value_note": "H1 actual 177,837 + Q3 outlook 108,000 + Q4 judgment 115,000",
+   "basis": "guidance + judgment",
+   "bound_reason": "Q3 is guided within +/-2%; only Q4 (14 weeks) is judgment, so +/-10% of the year is the widest a miss or beat could plausibly reach.",
+   "challenge": "Q4 FY2027 has no guidance yet; export controls on China Data Center compute remain in the outlook.",
+   "evidence": "Q3 FY2027 results and the Q4 outlook (expected November 2026)."
+  },
+  {
+   "key": "gross_margin_shift",
+   "label": "Gross margin, shift (pp, all years)",
+   "unit": "percentage points",
+   "base": 0.0,
+   "lo": -0.13,
+   "hi": 0.04,
+   "step": 0.005,
+   "fmt": "pp",
+   "value_note": "base path 74.5 -> 70.0 %",
+   "basis": "judgment",
+   "bound_reason": "-13 pp takes FY2031E to 57.0%, FY2023's 56.9% trough (the last cycle low, FY2024 10-K); +4 pp caps the first year at 78.5%, above any quarter NVIDIA has reported.",
+   "challenge": "Custom silicon (Broadcom-built accelerators) and AMD compete for the same racks; CUDA lock-in is a judgment, not a filing claim.",
+   "evidence": "Gross-margin guidance below 72% and falling; Data Center pricing disclosures."
+  },
+  {
+   "key": "opex_shift",
+   "label": "Operating expenses / revenue, shift (pp, all years)",
+   "unit": "percentage points",
+   "base": 0.0,
+   "lo": -0.02,
+   "hi": 0.06,
+   "step": 0.005,
+   "fmt": "pp",
+   "value_note": "base path 8.7 -> 12.5 %",
+   "basis": "judgment",
+   "bound_reason": "-2 pp is below the H1 FY2027 run-rate of 9.0%; +6 pp returns FY2031E to FY2024's 18.6%.",
+   "challenge": "Opex grew 41% in FY2026 (compensation, compute, infrastructure); the one-year product cadence keeps R&D rising.",
+   "evidence": "Opex growing faster than revenue for two consecutive quarters."
+  },
+  {
+   "key": "tax_rate",
+   "label": "Tax rate (all years)",
+   "unit": "fraction",
+   "base": 0.17,
+   "lo": 0.12,
+   "hi": 0.21,
+   "step": 0.005,
+   "fmt": "pct",
+   "value_note": "Q2 FY2027 release: FY2027 GAAP rate 16-18%",
+   "basis": "guidance",
+   "bound_reason": "FY2024 was 12.0%; 21% is the statutory rate with no FDDEI, SBC or R&D benefit.",
+   "challenge": "FDDEI and SBC benefits shrink as the mix changes; the rate rose each of the last three years.",
+   "evidence": "Effective rate in the next 10-K; tax-law changes."
+  },
+  {
+   "key": "capex_ratio",
+   "label": "Capital spending / revenue",
+   "unit": "fraction",
+   "base": 0.027980253591308617,
+   "lo": 0.015,
+   "hi": 0.06,
+   "step": 0.0025,
+   "fmt": "pct",
+   "value_note": "FY2026 2.8%",
+   "basis": "history",
+   "bound_reason": "FY2024 1.8% is the low; 6% is double the FY2026 ratio, the most a fabless company has needed.",
+   "challenge": "MD&A says capex will increase in FY2027; a ratio on 86% revenue growth already delivers 11.2bn.",
+   "evidence": "Purchases of property and equipment in the cash flow statement; any move to own fabs."
+  },
+  {
+   "key": "sbc_ratio",
+   "label": "Stock-based compensation / revenue",
+   "unit": "fraction",
+   "base": 0.025,
+   "lo": 0.015,
+   "hi": 0.06,
+   "step": 0.0025,
+   "fmt": "pct",
+   "value_note": "FY2026 3.0%, H1 FY2027 2.2%",
+   "basis": "judgment",
+   "bound_reason": "H1 FY2027 2.2% is the low; FY2024 5.8% is the high of the three filed years.",
+   "challenge": "SBC is added back as non-cash; treat it as a cash cost (toggle) and value falls.",
+   "evidence": "SBC line in the cash flow statement; share count after buybacks."
+  },
+  {
+   "key": "cost_of_equity",
+   "label": "Cost of equity",
+   "unit": "fraction",
+   "base": 0.12,
+   "lo": 0.09,
+   "hi": 0.16,
+   "step": 0.0025,
+   "fmt": "pct",
+   "value_note": "judgment between the tutorial 10% and the measured CAPM 13-14.8%",
+   "basis": "judgment",
+   "bound_reason": "9% is a beta of about 0.9 (below the market); 16% is the observed beta 2.21 plus one standard error (2.5) at rf 5% + ERP 4.42%.",
+   "challenge": "beta.py measures 2.21 raw (s.e. 0.30), 1.81 Blume; CAPM gives 13.0-14.8%, so 12% is the generous end.",
+   "evidence": "Re-estimated beta each quarter; the ten-year Treasury yield."
+  },
+  {
+   "key": "terminal_growth",
+   "label": "Terminal growth after FY2031E",
+   "unit": "fraction",
+   "base": 0.03,
+   "lo": 0.0,
+   "hi": 0.04,
+   "step": 0.0025,
+   "fmt": "pct",
+   "value_note": "long-run nominal growth",
+   "basis": "judgment",
+   "bound_reason": "0% is a flat industry after the build-out; 4% is about nominal GDP, the most a going concern can hold forever.",
+   "challenge": "In FY2031E the model reinvests 2.5% of net income and grows 3% forever, a 118% return on retained cash.",
+   "evidence": "Terminal growth must stay below the discount rate; the check refuses otherwise."
+  }
+ ],
+ "toggles": [
+  {
+   "key": "sbc_as_cash_cost",
+   "label": "Treat stock-based compensation as a cash cost (no add-back)",
+   "base": false,
+   "reason": "The honest alternative: SBC is a real cost to owners through dilution."
+  },
+  {
+   "key": "include_marketable_equity",
+   "label": "Add marketable equity securities to the bridge",
+   "base": true,
+   "reason": "Publicly held equity stakes at fair value (10-Q Note 7); liquid but strategic, so switchable."
+  },
+  {
+   "key": "bridge_latest",
+   "label": "Use the Q2 FY2027 balance sheet for the bridge (reference only)",
+   "base": false,
+   "reason": "Timing-inconsistent with full FY2027E cash flows; shown so the newer debt and cash are visible."
+  }
+ ],
+ "recommendation": {
+  "action": "Do not initiate at this price; keep on watch",
+  "why": "the price sits above the high case: it already pays for more than the compounding-cycle scenario delivers",
+  "range_low": 80.31262482680809,
+  "range_base": 123.92893425826256,
+  "range_high": 186.63269857417922,
+  "price": 225.51,
+  "conditions": [
+   "Initiate only if the price falls below the base case ($124) with the checks still passing, or if two quarterly reports move the growth path enough to lift the high case above the price.",
+   "Hold the watch posture while Data Center revenue keeps growing quarter on quarter and gross margin guidance stays at or above 72%."
+  ],
+  "reversal_triggers": [
+   {
+    "metric": "Data Center revenue, quarter on quarter",
+    "threshold": "any decline",
+    "window": "next two quarterly reports (Nov 2026, Feb 2027)",
+    "effect": "withdraw the base case and rebuild as the low case (about $80)"
+   },
+   {
+    "metric": "Gross margin guidance",
+    "threshold": "below 72% and falling",
+    "window": "next two quarterly reports",
+    "effect": "move the gross-margin path down 3 pp (about -$12 at base)"
+   },
+   {
+    "metric": "Operating expenses vs revenue",
+    "threshold": "opex growing faster than revenue for two quarters",
+    "window": "next two quarterly reports",
+    "effect": "opex path +2 pp (about -$5 at base)"
+   },
+   {
+    "metric": "Enterprise-to-equity bridge",
+    "threshold": "fails to reconcile after the next 10-Q (new debt, buybacks, securities)",
+    "window": "each filing",
+    "effect": "reject the per-share conclusion until the bridge reconciles"
+   }
+  ],
+  "committee_ask": "Approve watch/defer: no position now; authorise a re-review within one week of the Q3 FY2027 report with the tool re-run on the new filing.",
+  "monitoring_owner": "the analyst (this tool re-run on each filing); sector analysts own the demand view"
+ },
+ "method_disagreement": [
+  "FCFF DCF (base $124; causal range $80-$187) values the cash flows the filings and guidance support; it assumes growth decelerates from 25% to 4% after FY2027 and a 12% cost of equity.",
+  "The FCFE cross-check from Lab 10 gives $123.05: the two cash-flow definitions agree within a dollar because NVIDIA carries almost no net debt.",
+  "Trailing GAAP multiples disagree with the DCF in both directions. NVIDIA itself trades at 28.5x trailing earnings and 27.4x trailing EBIT; Broadcom at 45.3x and 40.4x, which applied to NVIDIA's trailing figures implies $358 (P/E) and $332 (EV/EBIT). AMD's 158x P/E and 153x EV/EBIT are reported but not meaningful: its 16% operating margin against NVIDIA's 65% means the market is capitalising a recovery, not current earnings.",
+  "Why they disagree: a trailing multiple capitalises last year's earnings at whatever growth the market expects of the peer; the DCF capitalises my explicit growth path. The peer multiples say the market expects NVIDIA's earnings to keep compounding well past FY2028; the DCF says the filings do not yet show that. The methods are not averaged: the DCF is the supported value, the multiples describe what the price is paying for.",
+  "Reverse DCF puts the disagreement in operating language: the price needs about +24 pp more growth in each of FY2028-FY2031 (a path near 49%, 36%, 31%, 28%), or a cost of equity near 8.0%, or terminal growth near 7.8%; no gross-margin or opex assumption inside the defended bounds reaches it."
+ ],
+ "run": {
+  "timestamp": "2026-10-19T21:04:07-04:00",
+  "commit": "c1be843",
+  "python": "3.13.5",
+  "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
+ }
+}
