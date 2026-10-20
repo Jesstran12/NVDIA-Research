@@ -1,0 +1,13 @@
+item,required,location_or_url,title,duration_or_as_of,timestamp_index,access_checked,frozen_or_commit_id,notes
+Research-Evolution.pdf,yes,docs/research-evolution.pdf (also attached in Brightspace),Research Evolution — Edition A (3 Sep 2026) unchanged + Edition B (19 Oct 2026),2026-10-19,,yes — public repository,HEAD of main at submission,Edition A receipt identifier: waived by the instructor
+Repository,yes,https://github.com/Jesstran12/NVDIA-Research,NVIDIA pro-forma valuation workbench,2026-10-19,,yes — public repository,HEAD of main at submission,README; requirements.txt; tests; docs/
+Visible executed output,yes,output/visible_output.md and output/visible_output.json (+ docs/screenshots/),Visible executed output (decision; checks; statements; valuation; sensitivities; comps),2026-09-23 valuation date,,yes,HEAD of main at submission,written by `python analysis.py`
+Decision memo or deck,yes,docs/decision-memo.pdf,Decision memo — NVIDIA (NVDA),2026-09-23 valuation date,,yes,HEAD of main at submission,two pages
+Validation-and-AI-Use.pdf,yes,docs/validation-and-ai-use.pdf (source: docs/validation-and-ai-use.md),Validation and AI Use,2026-10-19,,yes,HEAD of main at submission,includes the Locked Changed-Input Record (commit 3bcbdde) and the cold-run log
+Video 1,yes,https://youtu.be/cFeYa8cqtmw,"NVIDIA Research Update, AI Check, DCF Triggers",5:24,see docs/video/video-1-plan.md,yes — plays logged out (checked 2026-10-20),HEAD of main at submission,
+Transcript Video 1,yes,docs/transcript-video-1.txt,Corrected transcript — Video 1,,,yes,HEAD of main at submission,
+Video 2,yes,https://youtu.be/9M13GJx3WqM,Codebase Walkthrough and Highest Risk Review,see YouTube,see docs/video/video-2-plan.md,yes — plays logged out (checked 2026-10-20),HEAD of main at submission,
+Transcript Video 2,yes,docs/transcript-video-2.txt,Corrected transcript — Video 2,,,yes,HEAD of main at submission,
+Video 3,yes,https://youtu.be/C-wNiLI3T3g,Investment Community Demo Stress Testing Tool,see YouTube,see docs/video/video-3-plan.md,yes — plays logged out (checked 2026-10-20),HEAD of main at submission,opens with the live demo
+Transcript Video 3,yes,docs/transcript-video-3.txt,Corrected transcript — Video 3,,,yes,HEAD of main at submission,
+Optional deployed output,no,,,,,,,not deployed; local run only
