@@ -1,9 +1,9 @@
 PROJECT: FIN 43900 Project 1 — NVIDIA (NVDA) pro-forma valuation workbench
 STUDENT: Jess Tran
 VIDEO: 3 Committee Presentation
-STABLE VIDEO ID/URL: [fill in]
-TITLE: Investment-committee presentation with live product demo — NVIDIA Project 1
-DURATION: [fill in mm:ss]
+STABLE VIDEO ID/URL: YouTube https://youtu.be/C-wNiLI3T3g
+TITLE: Investment Community Demo Stress Testing Tool
+DURATION: see YouTube
 REPOSITORY COMMIT/FROZEN VERSION: 2ba2505
 
 [00:00] Jess Tran: I'm Jess Tran, the AI task-force analyst in the sector group. The fund holds no NVIDIA. My recommendation: do not initiate at 225 dollars 51; keep the name on watch. Value per share 124 base, 80 to 187 across the causal cases. Here is the tool the team keeps after this meeting.

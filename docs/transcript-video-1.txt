@@ -1,9 +1,9 @@
 PROJECT: FIN 43900 Project 1 — NVIDIA (NVDA) pro-forma valuation workbench
 STUDENT: Jess Tran
 VIDEO: 1 Research Evolution
-STABLE VIDEO ID/URL: [fill in]
-TITLE: Research evolution and AI-output check — NVIDIA Project 1
-DURATION: [fill in mm:ss]
+STABLE VIDEO ID/URL: YouTube https://youtu.be/cFeYa8cqtmw
+TITLE: NVIDIA Research Update, AI Check, DCF Triggers
+DURATION: 5:24
 REPOSITORY COMMIT/FROZEN VERSION: 2ba2505
 
 [00:00] Jess Tran: I'm Jess Tran. This is the research evolution for my Project 1 on NVIDIA, ticker NVDA.
