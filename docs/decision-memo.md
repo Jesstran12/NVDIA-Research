@@ -3,7 +3,7 @@
 **To:** the investment committee (no current position) · **From:** Jess Tran, AI task-force analyst, sector group ·
 **Valuation date:** 23 Sep 2026 (close $225.51) · **Information cutoff:** Q2 FY2027 10-Q, filed 26 Aug 2026 ·
 **Currency / share basis:** USD; 24,195m diluted shares (24,100m outstanding at 21 Aug 2026 + 95m dilutive awards) ·
-**Repository:** github.com/sonha2409/NVDIA-Research (commit `dacdfea` (analysis run); the frozen version is HEAD at push) · *Learning exercise for FIN 43900; not investment advice.*
+**Repository:** github.com/sonha2409/NVIDIA-RESEARCH-SON (commit `dacdfea` (analysis run); the frozen version is HEAD at push) · *Learning exercise for FIN 43900; not investment advice.*
 
 ## 1. Decision and committee ask
 

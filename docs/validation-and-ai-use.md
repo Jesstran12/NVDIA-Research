@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Decision / user | Do not initiate at $225.51; keep on watch — for the buy-side investment committee (no position) |
-| Repository | github.com/sonha2409/NVDIA-Research, commit `dacdfea` (analysis run); the frozen version is HEAD at push (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
+| Repository | github.com/sonha2409/NVIDIA-RESEARCH-SON, commit `dacdfea` (analysis run); the frozen version is HEAD at push (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
 | Run timestamp | printed in `output/visible_output.json` → `run.timestamp` |
 | Source cutoffs | Filings to the Q2 FY2027 10-Q (filed 26 Aug 2026); prices to the 23 Sep 2026 close; peer filings to Broadcom's Q3 FY2026 10-Q (10 Sep 2026). Nothing after 23 Sep 2026 |
 | Environment | Python 3.13 (3.11+ works), standard library for the engine; pandas 2.3, Streamlit 1.66, pytest 8 for the interface and tests (`requirements.txt`); macOS 15 |
