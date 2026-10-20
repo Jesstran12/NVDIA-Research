@@ -46,7 +46,7 @@ load-bearing rows:
 | Base restored after every shocked run | state leakage | module assumptions identical before and after sweeps; base value identical | identical; $123.93 both times | pass | `test_base_restored_after_shocked_runs`; `nvda_sensitivity.py` restored-base PASS (difference 0.000000) |
 | Out-of-bounds input is clamped and reported | silent extrapolation | cost of equity 50% → clamped to 16% and listed | clamped, reported | pass | `test_out_of_bounds_input_is_clamped_and_reported` |
 | Ranking depends on the ranges? | false precision in the driver ranking | rank at full bounds, half bounds, Lab 11 ranges | growth path first in all three; middle order changes with the bounds | reported as "over these ranges" | `output/visible_output.md` sensitivity |
-| **Cold run** (fresh environment, README only) | hidden dependency | clone → venv → `pip install -r requirements.txt` → `pytest` → `python analysis.py` → `streamlit run app.py` | see the cold-run log below | [fill in from the log] | `docs/cold-run-log.md` |
+| **Cold run** (fresh environment, README only) | hidden dependency | clone → venv → `pip install -r requirements.txt` → `pytest` → `python analysis.py` → `streamlit run app.py` | no failure; 17 tests passed; visible output written 22 s after the clone; app answered HTTP 200 (commit `145e5d7`) | pass | `docs/cold-run-log.md` |
 
 ## Locked Changed-Input Record — human prediction first; AI closed during execution
 

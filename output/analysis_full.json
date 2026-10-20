@@ -1245,8 +1245,8 @@
   "Reverse DCF puts the disagreement in operating language: the price needs about +24 pp more growth in each of FY2028-FY2031 (a path near 49%, 36%, 31%, 28%), or a cost of equity near 8.0%, or terminal growth near 7.8%; no gross-margin or opex assumption inside the defended bounds reaches it."
  ],
  "run": {
-  "timestamp": "2026-10-19T21:04:07-04:00",
-  "commit": "c1be843",
+  "timestamp": "2026-10-19T21:14:03-04:00",
+  "commit": "145e5d7",
   "python": "3.13.5",
   "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
  }
