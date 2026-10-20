@@ -32,6 +32,10 @@ CANDIDATES = {
     "D": {"Cash": 3, "Treasury bills": 0, "Treasury 10-year note": 0,
           "Global equity index fund": 89, "Investment-grade bond fund": 0,
           "Private real estate fund": 0, "Acme Corp bonds": 0, "Acme Corp stock": 8},
+    # E: the client's own 40/60 benchmark (Lab 14)
+    "E": {"Cash": 0, "Treasury bills": 0, "Treasury 10-year note": 0,
+          "Global equity index fund": 60, "Investment-grade bond fund": 40,
+          "Private real estate fund": 0, "Acme Corp bonds": 0, "Acme Corp stock": 0},
 }
 
 RESERVE_SIZE = 100.0          # USD millions
