@@ -35,8 +35,8 @@ support, or a cost of equity near 8%. Conditions, reversal triggers and the comm
 ## Setup and run
 
 ```
-git clone https://github.com/sonha2409/NVIDIA-RESEARCH-SON.git
-cd NVDIA-Research
+git clone https://github.com/sonha2409/NVIDIA-RESEARCH-JESS.git
+cd NVIDIA-RESEARCH-JESS
 python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python -m pytest -q            # 17 checks: known answers, articulation, monotonicity, bridge, loud failure
