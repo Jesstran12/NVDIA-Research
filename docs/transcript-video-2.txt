@@ -2,15 +2,39 @@ PROJECT: FIN 43900 Project 1 — NVIDIA (NVDA) pro-forma valuation workbench
 STUDENT: Jess Tran
 VIDEO: 2 Codebase Walkthrough
 STABLE VIDEO ID/URL: [fill in]
-TITLE: [fill in — matches the manifest]
+TITLE: Codebase walkthrough and highest-risk test — NVIDIA Project 1
 DURATION: [fill in mm:ss]
-REPOSITORY COMMIT/FROZEN VERSION: [fill in]
+REPOSITORY COMMIT/FROZEN VERSION: 2ba2505
 
-[00:00] Speaker: Corrected transcript begins.
-
-[Paste the platform transcript here after recording. Correct finance terms, tickers (NVDA, AMD, AVGO), names,
-speaker attribution and material numbers (e.g. $123.93 base, $80.31 low, $186.63 high, $225.51 price,
-+23.7 pp implied growth, WACC 11.99%). Filler words need not be perfect. Add a timestamp at each required
-evidence moment listed in docs/video/video-2-plan.md.]
-
-END OF CORRECTED TRANSCRIPT
+[00:00] Jess Tran: I'm Jess Tran. This is the code walkthrough for my NVIDIA valuation workbench.
+[00:00] Jess Tran: The architecture is one direction: evidence, then analysis, then tests, then a frozen visible output, then the app. The engine is standard-library Python. Pandas and Streamlit only render.
+[00:25] Jess Tran: This is the Lab 10 engine, unchanged. Every assumption sits at the top with a label: history, guidance or judgment. Growth 85.6 percent in FY2027 from guidance plus one quarter of judgment, then 25, 12, 7, 4. Gross margin 74.5 drifting to 70. The opening balance sheet is the FY2026 10-K, page 53, line by line. Each year computes the income statement, then the balance sheet except cash, then cash flow, and cash last, as the residual. This function refuses to value a sheet that does not balance.
+[01:15] Jess Tran: The Project 1 layer. Nine exposed drivers, each with a defended bound and the reason for the bound. Growth shift from minus 25 to plus 25 points: minus 25 is "AI capex stops", plus 25 is one point above what the price implies. Free cash flow to the firm is EBIT times one minus tax, plus D&A, plus stock compensation, minus capex, minus the working-capital build. WACC uses market weights; debt is 0.16 percent of capital, so WACC is 11.99 percent. Five explicit years, a Gordon terminal value, then the bridge: enterprise value plus cash and marketable securities minus debt, over 24,195 million diluted shares. The bridge is dated at the opening balance sheet so no cash flow is counted twice. Eighteen checks run on every call; failures come back as a list, never as an exception that hides.
+[02:20] Jess Tran: `analysis.py` computes every material result and writes the frozen output; the recommendation rule is here, not in the interface.
+[02:35] Jess Tran: Reproduce it.
+        [On screen: runs `python -m pytest -q`]
+[02:35] Jess Tran: Seventeen tests: the training-case DCF to four decimals, the ABG known answer of 291 dollars 75, my base reproduced through the wrapper, articulation under shocks, monotonicity in WACC and growth, the bridge.
+        [On screen: runs `python analysis.py`]
+[02:35] Jess Tran: Base 123 dollars 93, low 80 dollars 31, high 186 dollars 63, checks all pass. This file is what a grader reads without running anything.
+[03:20] Jess Tran: The highest-risk claim is that the price pays for growth the filings do not show. The test is the reverse DCF: solve the growth shift that makes value equal 225 dollars 51. Answer: plus 23.7 points a year. My defended bound is plus 25. So the call survives by 1.3 points. That is the risk I report, not hide: one judgment stands between my bound and the market's path. On top of the high case it still takes 17 more points a year.
+[03:55] Jess Tran: And the loud failure.
+        [On screen: runs `python analysis.py --break`]
+[03:55] Jess Tran: The cash line is typed instead of linked, and the model refuses: FY2027 does not balance by minus 10,088, which is exactly the year's change in cash with the sign flipped. The fingerprint of an unlinked cash line.
+[04:20] Jess Tran: Limitations I have not resolved: the value is struck at the January balance sheet and compared with a September price, about eight percent of roll-forward; FY2027 is a 53-week year; stock compensation is added back, and treating it as cash costs about six dollars. All three are in the validation record.
+[04:40] Jess Tran: Everything on screen came from `python analysis.py`, and the frozen JSON the app shows is that run. Thank you.
+[00:00] Jess Tran: I'm Jess Tran. This is the code walkthrough for my NVIDIA valuation workbench.
+[00:00] Jess Tran: The architecture is one direction: evidence, then analysis, then tests, then a frozen visible output, then the app. The engine is standard-library Python. Pandas and Streamlit only render.
+[00:25] Jess Tran: This is the Lab 10 engine, unchanged. Every assumption sits at the top with a label: history, guidance or judgment. Growth 85.6 percent in FY2027 from guidance plus one quarter of judgment, then 25, 12, 7, 4. Gross margin 74.5 drifting to 70. The opening balance sheet is the FY2026 10-K, page 53, line by line. Each year computes the income statement, then the balance sheet except cash, then cash flow, and cash last, as the residual. This function refuses to value a sheet that does not balance.
+[01:15] Jess Tran: The Project 1 layer. Nine exposed drivers, each with a defended bound and the reason for the bound. Growth shift from minus 25 to plus 25 points: minus 25 is "AI capex stops", plus 25 is one point above what the price implies. Free cash flow to the firm is EBIT times one minus tax, plus D&A, plus stock compensation, minus capex, minus the working-capital build. WACC uses market weights; debt is 0.16 percent of capital, so WACC is 11.99 percent. Five explicit years, a Gordon terminal value, then the bridge: enterprise value plus cash and marketable securities minus debt, over 24,195 million diluted shares. The bridge is dated at the opening balance sheet so no cash flow is counted twice. Eighteen checks run on every call; failures come back as a list, never as an exception that hides.
+[02:20] Jess Tran: `analysis.py` computes every material result and writes the frozen output; the recommendation rule is here, not in the interface.
+[02:35] Jess Tran: Reproduce it.
+        [On screen: runs `python -m pytest -q`]
+[02:35] Jess Tran: Seventeen tests: the training-case DCF to four decimals, the ABG known answer of 291 dollars 75, my base reproduced through the wrapper, articulation under shocks, monotonicity in WACC and growth, the bridge.
+        [On screen: runs `python analysis.py`]
+[02:35] Jess Tran: Base 123 dollars 93, low 80 dollars 31, high 186 dollars 63, checks all pass. This file is what a grader reads without running anything.
+[03:20] Jess Tran: The highest-risk claim is that the price pays for growth the filings do not show. The test is the reverse DCF: solve the growth shift that makes value equal 225 dollars 51. Answer: plus 23.7 points a year. My defended bound is plus 25. So the call survives by 1.3 points. That is the risk I report, not hide: one judgment stands between my bound and the market's path. On top of the high case it still takes 17 more points a year.
+[03:55] Jess Tran: And the loud failure.
+        [On screen: runs `python analysis.py --break`]
+[03:55] Jess Tran: The cash line is typed instead of linked, and the model refuses: FY2027 does not balance by minus 10,088, which is exactly the year's change in cash with the sign flipped. The fingerprint of an unlinked cash line.
+[04:20] Jess Tran: Limitations I have not resolved: the value is struck at the January balance sheet and compared with a September price, about eight percent of roll-forward; FY2027 is a 53-week year; stock compensation is added back, and treating it as cash costs about six dollars. All three are in the validation record.
+[04:40] Jess Tran: Everything on screen came from `python analysis.py`, and the frozen JSON the app shows is that run. Thank you.

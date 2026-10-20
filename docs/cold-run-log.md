@@ -1,7 +1,7 @@
 # Cold-run log
 
 Fresh clone, fresh virtual environment, README instructions only, run by `scripts/cold_run.sh` (the full console
-output is reproduced below). A second cold run on a different machine by a partner should be added to this table.
+output is reproduced below). No human partner was available, so no second-person cold run was performed.
 
 | Field | Value |
 |---|---|
@@ -13,7 +13,7 @@ output is reproduced below). A second cold run on a different machine by a partn
 | Time to visible output | 22 s from clone to `output/visible_output.md` written |
 | Tests | 17 passed |
 | App started | HTTP 200 on the first probe, 1 s after launch; total cold run 24 s |
-| Partner README-only cold run (Week 7 studio) | [fill in: first failure, elapsed time, who ran it] |
+| Second-person README-only cold run | not performed (no human partner); limitation recorded |
 
 ```
 == cold run started 2026-10-19T21:11

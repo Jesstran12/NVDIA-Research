@@ -2,7 +2,7 @@
 
 Spoken word-for-word scripts at about 140 words a minute, with the screen action in **[brackets]**. Every number
 matches `output/visible_output.md` at the frozen commit; if you rerun the analysis after changing an input, re-check
-the numbers before recording. Replace *[partner]* before you start. Webcam on in all three.
+the numbers before recording. Webcam on in all three.
 
 ---
 
@@ -25,7 +25,7 @@ case.
 Three things drove the change, and I keep them separate. First, course instruction: the FCFF and WACC architecture,
 the pro-forma as a labelled assumption set with checks, and the frozen peer policy. Second, my own analysis: the
 FY2027 build from guidance, the growth deceleration from 25 to 4 percent, the margin drift, and the 12 percent cost of
-equity against a measured 13 to 15. Third, peer challenge: *[partner]* asked what happens to NVIDIA if AI stalls,
+equity against a measured 13 to 15. Third, an AI-generated challenge: in my review with Claude, the AI asked what happens to NVIDIA if AI stalls,
 and that question turned a small sensitivity into the low case, where growth, margin, opex and the discount rate all
 move together.
 
@@ -155,7 +155,7 @@ says what the filings support. I do not average them.
 
 **[2:30] [Click "Assumption record".]** The three assumptions that carry the value. Growth after FY2027, which is
 the valuation. Cost of equity at 12 percent, which is the generous end of a measured 13 to 15. Gross margin, 74.5
-drifting to 70. *[Partner]*'s challenge, "what if AI stalls", built the low case. My locked prediction from Lab 11,
+drifting to 70. The AI-generated challenge, "what if AI stalls", built the low case. My locked prediction from Lab 11,
 committed before the run, said growth would move value three times as much as margin; the result was 2.6 times, with
 the direction and order right and the size reconciled.
 
