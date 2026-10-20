@@ -63,6 +63,29 @@ volatility rose from 10.46 to **11.00**. I then set it back to 0.25.
 `Refusing to run: Correlation [3][4] = 1.3 is outside -1 to 1`. Making only one cell different
 (0.70 against 0.80) also refused: `Correlation table is not symmetric`. I then undid both changes.
 
+**Explain the code.** The block that turns weights, volatilities and correlations into portfolio
+volatility is `covariance_matrix` and `volatility` in `portfolio.py`:
+
+```python
+v = [x / 100 for x in vols]                                         # line 50
+return [[corr[i][j] * v[i] * v[j] for j in range(len(v))] for i in range(len(v))]
+...
+variance = sum(weights[i] * cov[i][j] * weights[j] for i in range(n) for j in range(n))  # line 76
+return math.sqrt(variance) * 100                                    # line 77
+```
+
+Line 50 turns percent into decimals. Line 51 builds each covariance cell as correlation × vol × vol.
+Line 76 adds wᵢ × covᵢⱼ × wⱼ over every pair (i, j), including i = j, and line 77 takes the square
+root and turns it back into percent.
+
+**Partner's question (playing both roles):** *"Where is the 2 in the correlation term? Your hand
+calculation has 2 × w₁ × w₂ × ρ × σ₁ × σ₂, but line 76 has no 2."*
+
+**My answer, from the code:** line 76 loops over every (i, j), so it visits IG–equity once as
+(3, 4) and again as (4, 3). Because the table is symmetric, `cov[2][3]` equals `cov[3][2]`, so the
+pair is added twice; that is the 2. This is also why `validate_correlation` refuses an asymmetric
+table: the two visits would disagree and the volatility would be wrong.
+
 **Read it: candidate E in the mandate checker.**
 
 ```
