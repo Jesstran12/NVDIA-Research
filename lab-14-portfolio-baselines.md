@@ -101,6 +101,29 @@ Candidate E
 
 The benchmark fails only the reserve rule (S3): it holds no cash or Treasuries at all.
 
+## What "none of the three meets the whole mandate" means
+
+The mandate asks for two things at once: the **return objective** (expected return of at least
+6.5%) and the **checkable hard rules** from Lab 13 (reserve-eligible at least 3.0%, long-only, at
+least 90% redeemable in 5 days, no single company above 8%). A portfolio has to meet both.
+
+| Portfolio | Return ≥ 6.5%? | Reserve ≥ 3.0%? | Other rules | Whole mandate? |
+| --- | --- | --- | --- | --- |
+| Benchmark | yes (6.80) | **no (0.0)** | pass | no |
+| Equal weight | **no (5.20)** | yes (50.0) | pass | no |
+| Inverse volatility | **no (3.77)** | yes (90.3) | pass | no |
+
+The benchmark earns enough but has no cash or Treasuries for the payout reserve. The other two
+have plenty of reserve but do not earn enough. Each passes half of the mandate, so none passes all
+of it.
+
+A mix in between can pass both. Moving 3% of the portfolio from the IG bond fund into bills
+(bills 3 / 10-year 0 / IG 37 / equity 60) gives a reserve of 3.0%, an expected return of 6.75% and
+a volatility of 10.38%, computed with the functions in `portfolio.py`. Finding the lowest-risk mix
+like this is Thursday's job. Even then, a mix that passes both is only *permitted*, not
+*suitable*: the 10% calendar-year loss rule (S9) still cannot be tested until the CIO says how it
+is measured.
+
 ## Diversification: learn on my own
 
 1. **What it is.** Diversification means holding assets that do not move in lockstep, so that a
