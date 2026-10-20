@@ -2,7 +2,7 @@
 
 ## Edition A — unchanged Brightspace baseline
 
-Submitted to the Project 1 Edition A checkpoint on 3 Sep 2026 (Lab 03). Brightspace receipt / attempt identifier and timestamp: **[fill in]**. The file below is `NVDA_2026-09-03_report.md` exactly as committed on 3 Sep 2026 (commit `983a272`); it has not been modified. Attestation: prepared without generative-AI assistance for valuation-specific work, except the disclosed Lab 03 drafting support noted in its footer. **[student to confirm]**
+Submitted to the Project 1 Edition A checkpoint on 3 Sep 2026 (Lab 03). Brightspace receipt / attempt identifier and timestamp: **[fill in]**. The file below is `NVDA_2026-09-03_report.md` exactly as committed on 3 Sep 2026 (commit `983a272`); it has not been modified. Attestation (Jess Tran): the first successful Brightspace receipt is the baseline of record; the file footer discloses the Lab 03 drafting support used. Receipt ID and timestamp: **[fill in from Brightspace]**.
 
 ---
 

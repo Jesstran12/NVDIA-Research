@@ -2,7 +2,7 @@
 
 Spoken word-for-word scripts at about 140 words a minute, with the screen action in **[brackets]**. Every number
 matches `output/visible_output.md` at the frozen commit; if you rerun the analysis after changing an input, re-check
-the numbers before recording. Replace *[your name]* and *[partner]* before you start. Webcam on in all three.
+the numbers before recording. Replace *[partner]* before you start. Webcam on in all three.
 
 ---
 
@@ -10,7 +10,7 @@ the numbers before recording. Replace *[your name]* and *[partner]* before you s
 
 **[Screen: `docs/research-evolution.md` open at the top. Webcam on.]**
 
-**[0:00]** I'm *[your name]*. This is the research evolution for my Project 1 on NVIDIA, ticker NVDA.
+**[0:00]** I'm Jess Tran. This is the research evolution for my Project 1 on NVIDIA, ticker NVDA.
 
 **[Scroll to Edition A.]** This is Edition A, submitted on the third of September before any valuation AI work,
 unchanged. My call then was watch-defer, and the reason was simple: nothing was measured yet. I had the FY2026
@@ -54,7 +54,7 @@ my verdict on it is in one file. Thank you.
 **[Screen: VS Code with the repository open; README visible; a terminal at the bottom with the virtual environment
 activated. Webcam on.]**
 
-**[0:00]** I'm *[your name]*. This is the code walkthrough for my NVIDIA valuation workbench.
+**[0:00]** I'm Jess Tran. This is the code walkthrough for my NVIDIA valuation workbench.
 
 **[Scroll README to the repository map.]** The architecture is one direction: evidence, then analysis, then tests,
 then a frozen visible output, then the app. The engine is standard-library Python. Pandas and Streamlit only render.
@@ -124,7 +124,7 @@ Thank you.
 **[Before recording: `streamlit run app.py` running in the browser, window wide enough that the sidebar shows,
 base restored. Webcam on. Start on the app.]**
 
-**[0:00]** I'm *[your name]*, the AI task-force analyst in the sector group. The fund holds no NVIDIA. My
+**[0:00]** I'm Jess Tran, the AI task-force analyst in the sector group. The fund holds no NVIDIA. My
 recommendation: do not initiate at 225 dollars 51; keep the name on watch. Value per share 124 base, 80 to 187 across
 the causal cases. Here is the tool the team keeps after this meeting.
 

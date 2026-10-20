@@ -1,5 +1,5 @@
 PROJECT: FIN 43900 Project 1 — NVIDIA (NVDA) pro-forma valuation workbench
-STUDENT: [fill in]
+STUDENT: Jess Tran
 VIDEO: 3 Committee Presentation
 STABLE VIDEO ID/URL: [fill in]
 TITLE: [fill in — matches the manifest]

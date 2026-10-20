@@ -177,8 +177,8 @@
     "Peer multiples use trailing GAAP figures; both peers carry large acquired-intangible amortisation, which depresses their GAAP earnings and inflates their multiples."
   ],
   "run": {
-    "timestamp": "2026-10-19T21:22:29-04:00",
-    "commit": "fb23806",
+    "timestamp": "2026-10-19T21:57:19-04:00",
+    "commit": "dacdfea",
     "python": "3.13.5",
     "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
   },

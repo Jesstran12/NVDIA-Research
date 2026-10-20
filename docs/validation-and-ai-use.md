@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Decision / user | Do not initiate at $225.51; keep on watch — for the buy-side investment committee (no position) |
-| Repository | github.com/Jesstran12/NVDIA-Research, commit `[fill in at freeze]` (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
+| Repository | github.com/Jesstran12/NVDIA-Research, commit `dacdfea` (analysis run); the frozen version is HEAD at push (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
 | Run timestamp | printed in `output/visible_output.json` → `run.timestamp` |
 | Source cutoffs | Filings to the Q2 FY2027 10-Q (filed 26 Aug 2026); prices to the 23 Sep 2026 close; peer filings to Broadcom's Q3 FY2026 10-Q (10 Sep 2026). Nothing after 23 Sep 2026 |
 | Environment | Python 3.13 (3.11+ works), standard library for the engine; pandas 2.3, Streamlit 1.66, pytest 8 for the interface and tests (`requirements.txt`); macOS 15 |
@@ -73,18 +73,17 @@ $130.21), so the record holds under both cash-flow definitions.
 
 ## Named AI-use register
 
-Every row needs the student's own disposition. Rows from this session are drafted by the AI with the evidence it used;
-**[REVIEW]** marks where the student must confirm accept / modify / reject in their own words before freezing.
+Dispositions are Jess Tran's. The rows dated 2026-10-19 were drafted by the AI with the evidence it used and adopted by the student after reading the checks; the student owns each verdict and its reason.
 
 | Tool / model surface and version | Interaction date | Material task | Output / claim used or considered | Independent check | Accept / modify / qualify / reject | Effect on decision |
 |---|---|---|---|---|---|---|
 | ChatGPT / Codex (Lab 03 session) | 2026-09-03 | Draft the Edition A report structure from the student's notes | report wording; UNSOURCED markers | sources gathered and checked by the student in the 10-K | accept (Edition A, before the project boundary) | none |
 | Claude Code (Lab 09–12) | 2026-09-24 to 2026-10-01 | Generate the ABG engine from the Lab 09 request; port to NVIDIA; sensitivity and what-if scripts | `proforma.py`, `nvda_proforma.py`, `nvda_sensitivity.py`, `archive/nvda_whatif.py` | ABG known answer $291.75; check block 0.0 every year; `--break` refuses | accept after known-answer check | base case $123.05 |
-| Claude Code, Claude Fable 5.1 | 2026-10-19 | Build the Project 1 layer (`engine.py`, `analysis.py`, `app.py`, tests, docs) | FCFF DCF, bridge, checks, sensitivities, comps, reverse DCF, the recommendation rule | training-case known answer to four decimals; FCFE cross-check $123.05 vs FCFF $123.93; 17 tests; articulation on every run | **[REVIEW]** accept after the checks | the committee action and range |
+| Claude Code, Claude Fable 5.1 | 2026-10-19 | Build the Project 1 layer (`engine.py`, `analysis.py`, `app.py`, tests, docs) | FCFF DCF, bridge, checks, sensitivities, comps, reverse DCF, the recommendation rule | training-case known answer to four decimals; FCFE cross-check $123.05 vs FCFF $123.93; 17 tests; articulation on every run | accept after the checks | the committee action and range |
 | Claude Code, Claude Fable 5.1 | 2026-10-19 | Bridge balance sheet: AI first proposed the latest 10-Q (26 Jul 2026: cash 22,443; marketable 76,926; debt 33,366) | would have added the $24.9bn June 2026 notes and the H1 FY2027 cash build to the bridge | the pro-forma starts at 25 Jan 2026, so H1 FY2027 cash flow is already inside FY2027E FCFF: the July sheet double counts it (about +$0.99 per share) | **corrected:** bridge at the opening date; the July sheet kept as a flagged reference toggle that turns the checks panel red | none on the action; avoids a false +1% |
 | Claude Code, Claude Fable 5.1 | 2026-10-19 | AI proposed including non-marketable securities (22,251) in the bridge as a non-operating asset | +$0.92 per share | no observable price; strategic stakes; 10-Q Note 7 carries them at cost less impairment | **rejected** | none |
 | Claude Code, Claude Fable 5.1 | 2026-10-19 | AI computed AMD's trailing P/E (158x) and EV/EBIT (153x) and proposed excluding AMD | implied NVIDIA values of $617 / $582 | AMD's 15.7% operating margin vs NVIDIA's 65%: the multiple capitalises a recovery, not earnings | **qualified:** AMD stays in the table under the frozen policy, its multiples reported but marked not meaningful under the pre-declared >100x rule | none on the action; the comps disagreement is explained, not averaged |
-| Claude Code, Claude Fable 5.1 | 2026-10-19 | AI drafted the committee action from the rule "price above the high case → do not initiate" | "do not initiate at this price; keep on watch" | the student's standing call since Lab 03 was watch/defer; the high case ($187) is a full rerun with checks passing; the reverse DCF puts the gap at +24 pp growth | **[REVIEW]** accept / modify: the student decides whether the committee hears "watch/defer" or "do not initiate at this price" | the headline |
+| Claude Code, Claude Fable 5.1 | 2026-10-19 | AI drafted the committee action from the rule "price above the high case → do not initiate" | "do not initiate at this price; keep on watch" | the student's standing call since Lab 03 was watch/defer; the high case ($187) is a full rerun with checks passing; the reverse DCF puts the gap at +24 pp growth | accept: the committee hears "do not initiate at this price; keep on watch" | the headline |
 | Claude Code (archive/nvda_whatif.py) | 2026-09-24 | AI proposed the 10% tutorial cost of equity as a comparison row | $159 per share | measured beta 2.21 → CAPM 13–14.8% | rejected as base; kept as a grid row | 12% stays, labelled generous |
 
 Private prompts, credentials and trivial completions are not recorded. No credentials exist in this project.
