@@ -48,7 +48,7 @@ streamlit run app.py           # the workbench (opens http://localhost:8501)
 The engine (`engine.py`, `nvda_proforma.py`, `proforma.py`, `analysis.py`) uses only the Python
 standard library; pandas and Streamlit are needed only for the interface and pytest for the tests.
 No credentials, no `.env`, no network at run time (`fetch_sec_facts.py` refreshes the SEC extract and
-is optional). Python 3.11 or later.
+is optional). Python 3.12 or later (`analysis.py` uses 3.12 f-string syntax).
 
 ## Repository map
 
