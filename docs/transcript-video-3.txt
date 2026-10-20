@@ -4,7 +4,7 @@ VIDEO: 3 Committee Presentation
 STABLE VIDEO ID/URL: YouTube https://youtu.be/C-wNiLI3T3g
 TITLE: Investment Community Demo Stress Testing Tool
 DURATION: see YouTube
-REPOSITORY COMMIT/FROZEN VERSION: 2ba2505
+REPOSITORY COMMIT/FROZEN VERSION: HEAD of main at submission (exact ID in the Brightspace manifest)
 
 [00:00] Jess Tran: I'm Jess Tran, the AI task-force analyst in the sector group. The fund holds no NVIDIA. My recommendation: do not initiate at 225 dollars 51; keep the name on watch. Value per share 124 base, 80 to 187 across the causal cases. Here is the tool the team keeps after this meeting.
 [00:15] Jess Tran: Move one bounded driver. Growth after FY2027 ten points lower each year. Value falls from 123 dollars 93 to about 95; the change-from-base line shows minus 29. The trace shows why: FY2031 revenue drops, operating income drops, free cash flow drops, and the terminal value carries most of it. Every check stays green, so this is a coherent downside.

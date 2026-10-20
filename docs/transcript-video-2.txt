@@ -4,7 +4,7 @@ VIDEO: 2 Codebase Walkthrough
 STABLE VIDEO ID/URL: YouTube https://youtu.be/9M13GJx3WqM
 TITLE: Codebase Walkthrough and Highest Risk Review
 DURATION: see YouTube
-REPOSITORY COMMIT/FROZEN VERSION: 2ba2505
+REPOSITORY COMMIT/FROZEN VERSION: HEAD of main at submission (exact ID in the Brightspace manifest)
 
 [00:00] Jess Tran: I'm Jess Tran. This is the code walkthrough for my NVIDIA valuation workbench.
 [00:00] Jess Tran: The architecture is one direction: evidence, then analysis, then tests, then a frozen visible output, then the app. The engine is standard-library Python. Pandas and Streamlit only render.
