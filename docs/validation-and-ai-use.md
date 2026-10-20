@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Decision / user | Do not initiate at $225.51; keep on watch — for the buy-side investment committee (no position) |
-| Repository | github.com/Jesstran12/NVDIA-Research, commit `dacdfea` (analysis run); the frozen version is HEAD at push (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
+| Repository | github.com/Jesstran12/NVDIA-Research, commit `84f78ba` (analysis run); the frozen version is HEAD at push (the frozen commit is also printed in `output/visible_output.json` → `run.commit`) |
 | Run timestamp | printed in `output/visible_output.json` → `run.timestamp` |
 | Source cutoffs | Filings to the Q2 FY2027 10-Q (filed 26 Aug 2026); prices to the 23 Sep 2026 close; peer filings to Broadcom's Q3 FY2026 10-Q (10 Sep 2026). Nothing after 23 Sep 2026 |
 | Environment | Python 3.13 (3.12+ required; 3.12.14 also verified 19 Oct 2026), standard library for the engine; pandas 2.3, Streamlit 1.66, pytest 8 for the interface and tests (`requirements.txt`); macOS 15 |
@@ -47,7 +47,7 @@ load-bearing rows:
 | Base restored after every shocked run | state leakage | module assumptions identical before and after sweeps; base value identical | identical; $123.93 both times | pass | `test_base_restored_after_shocked_runs`; `nvda_sensitivity.py` restored-base PASS (difference 0.000000) |
 | Out-of-bounds input is clamped and reported | silent extrapolation | cost of equity 50% → clamped to 16% and listed | clamped, reported | pass | `test_out_of_bounds_input_is_clamped_and_reported` |
 | Ranking depends on the ranges? | false precision in the driver ranking | rank at full bounds, half bounds, Lab 11 ranges | growth path first in all three; middle order changes with the bounds | reported as "over these ranges" | `output/visible_output.md` sensitivity |
-| **Cold run** (fresh environment, README only) | hidden dependency | clone → venv → `pip install -r requirements.txt` → `pytest` → `python analysis.py` → `streamlit run app.py` | no failure; 17 tests passed; visible output written 22 s after the clone; app answered HTTP 200 (commit `145e5d7`) | pass | `docs/cold-run-log.md` |
+| **Cold run** (fresh environment, README only) | hidden dependency | clone → venv → `pip install -r requirements.txt` → `pytest` → `python analysis.py` → `streamlit run app.py` | no failure; 17 tests passed; visible output written 22 s after the clone; app answered HTTP 200 (commit `d88cb9a`) | pass | `docs/cold-run-log.md` |
 
 ## Locked Changed-Input Record — human prediction first; AI closed during execution
 
