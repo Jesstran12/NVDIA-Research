@@ -12,7 +12,8 @@
 
 ## Data and convention ledger
 
-The complete ledger (31 inputs with locator, type, independent check and risk) is `docs/evidence-ledger.csv`. The
+The complete ledger (33 inputs with locator, type, independent check and risk) is `docs/evidence-ledger.csv`; the
+base-year normalization (one-time items, basis changes, mechanical checks) is `docs/base-year-normalization.md`. The
 load-bearing rows:
 
 | Material input | Source | As-of | Definition / units | Transformation / exclusion | Risk |

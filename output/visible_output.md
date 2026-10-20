@@ -1,5 +1,5 @@
 # NVIDIA (NVDA) — Project 1 visible executed output
-Run 2026-10-19T21:14:03-04:00 at commit `145e5d7` with Python 3.13.5; engine engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09). USD millions unless stated. Learning demonstration for FIN 43900, not investment advice.
+Run 2026-10-19T21:22:29-04:00 at commit `fb23806` with Python 3.13.5; engine engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09). USD millions unless stated. Learning demonstration for FIN 43900, not investment advice.
 
 ## Decision
 
@@ -131,16 +131,18 @@ Run 2026-10-19T21:14:03-04:00 at commit `145e5d7` with Python 3.13.5; engine eng
 | Base — Lab 10 assumption set | The labelled base case: growth 25 / 12 / 7 / 4 %, gross margin 74.5 -> 70 %, 12% cost of equity, 3% terminal growth. | 123.93 | 624,385 | 305,970 | 67.6% | pass |
 | High — the compute cycle keeps compounding and CUDA holds price | Data Center spending compounds (growth path 35 / 22 / 17 / 14 %), pricing power holds (gross margin +1.5 pp), and the market accepts a lower required return (11%). | 186.63 | 880,423 | 429,753 | 73.8% | pass |
 
-## Cost of equity × terminal growth, $ per share (base in bold)
+## WACC × terminal growth, $ per share (base in bold)
 
-| Cost of equity \ g | 0.0% | 1.0% | 2.0% | 3.0% | 4.0% |
+Rows are the cost-of-equity driver; the WACC it produces (debt weight 0.16%) is shown beside it.
+
+| Cost of equity (WACC) \ g | 0.0% | 1.0% | 2.0% | 3.0% | 4.0% |
 |---|---:|---:|---:|---:|---:|
-| 10.0% | 122.5 | 132.1 | 144.1 | 159.6 | 180.2 |
-| 11.0% | 111.0 | 118.6 | 127.9 | 139.5 | 154.5 |
-| 12.0% | 101.5 | 107.6 | 115.0 | **123.9** | 135.1 |
-| 13.0% | 93.5 | 98.5 | 104.4 | 111.5 | 120.1 |
-| 14.0% | 86.6 | 90.7 | 95.6 | 101.3 | 108.1 |
-| 15.0% | 80.7 | 84.1 | 88.1 | 92.8 | 98.3 |
+| 10.0% (9.99%) | 122.5 | 132.1 | 144.1 | 159.6 | 180.2 |
+| 11.0% (10.99%) | 111.0 | 118.6 | 127.9 | 139.5 | 154.5 |
+| 12.0% (11.99%) | 101.5 | 107.6 | 115.0 | **123.9** | 135.1 |
+| 13.0% (12.98%) | 93.5 | 98.5 | 104.4 | 111.5 | 120.1 |
+| 14.0% (13.98%) | 86.6 | 90.7 | 95.6 | 101.3 | 108.1 |
+| 15.0% (14.98%) | 80.7 | 84.1 | 88.1 | 92.8 | 98.3 |
 
 ## One-at-a-time sensitivity at the defended bounds (base $123.93)
 
@@ -167,6 +169,17 @@ Ranking at the full bounds: growth_shift > cost_of_equity > gross_margin_shift >
 | Terminal growth after FY2031E | 3.00% | 7.78% | no — outside the defended bounds (0.0, 0.04); searched (0.0, 0.1) to report what the price assumes |
 | Gross margin, shift (pp, all years) | +0.0 pp | not reachable in (-0.15, 0.25) | no — outside the defended bounds (-0.13, 0.04); searched (-0.15, 0.25) to report what the price assumes |
 | Operating expenses / revenue, shift (pp, all years) | +0.0 pp | not reachable in (-0.09, 0.06) | no — outside the defended bounds (-0.02, 0.06); searched (-0.09, 0.06) to report what the price assumes |
+
+## What would reverse the call — the smallest change that lifts value to the price
+
+The downside cases cannot alter a do-not-initiate call; the scenario that would is on the upside. Each row is a full rerun with checks.
+
+| Scenario | Growth shift needed | Resulting FY2028E–FY2031E path | FY2031E revenue | $/share | Checks |
+|---|---|---|---:|---:|---|
+| Growth path alone, everything else at base | +23.7 pp a year | 49% / 36% / 31% / 28% | 1,350,543 | 225.51 | pass |
+| Growth path on top of the high case (gross margin +1.5 pp, cost of equity 11%) | +17.4 pp a year | 42% / 29% / 24% / 21% | 1,114,912 | 225.51 | pass |
+
+Monitoring: the Q3 and Q4 FY2027 reports show whether Data Center growth is tracking the +17 pp path (about 42% in FY2028E) or the base 25%; the call is reviewed on each report, with the tool re-run on the new filing.
 
 ## Comparable companies (policy frozen before the numbers)
 
@@ -209,4 +222,4 @@ Peer qualifications: **AMD** — Data-center GPUs and CPUs compete for the same 
 - FY2024-FY2026 10-Ks (accessions 0001045810-24-000029, -25-000023, -26-000021) for the history grid in nvda-proforma.md
 - Q1 and Q2 FY2027 10-Qs (0001045810-26-000052, -26-000075) and the Q2 FY2027 press release (8-K 0001045810-26-000073, 26 Aug 2026) for H1 actuals, the Q3 outlook and the share count
 - Peer figures: SEC XBRL companyfacts for AMD (CIK 0000002488) and Broadcom (CIK 0001730168), extracted to src/sec_xbrl/companyfacts_extract.csv; Nasdaq closes 23 Sep 2026 cached in src/beta_prices/
-- Full evidence ledger: docs/evidence-ledger.csv
+- Full evidence ledger: docs/evidence-ledger.csv; base-year normalization (one-time items, basis changes, mechanical checks): docs/base-year-normalization.md

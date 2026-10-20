@@ -61,7 +61,7 @@ is optional). Python 3.11 or later.
 | `app.py` | Streamlit workbench: bounded sliders, base reset, stress mode, checks panel, statements, valuation, sensitivity, grid, cases, reverse DCF, comps, assumption record, frozen output. |
 | `tests/test_project1.py` | The validation suite (`python -m pytest -q`). |
 | `output/` | Visible executed output (Markdown, JSON) and the full result dump. |
-| `docs/` | Decision memo, validation and AI-use record, research evolution (Edition A unchanged + Edition B), evidence ledger, assumption-challenge record, manifest, video plans and transcript stubs. |
+| `docs/` | Decision memo, validation and AI-use record, research evolution (Edition A unchanged + Edition B), evidence ledger, base-year normalization (contamination catalog), assumption-challenge record, manifest, video plans and transcript stubs. |
 | `src/` | Saved filings (FY2024–FY2026 10-Ks), Nasdaq price caches, the SEC XBRL extract (`src/sec_xbrl/companyfacts_extract.csv`). |
 | `nvda-proforma.md`, `nvda-sensitivity.md`, `nvda-dcf-inputs.md`, `abg-proforma.md` | Lab write-ups the project builds on (history grid, assumption reasons, Lab 11 locked prediction, Lab 7–8 peer policy). |
 | `archive/` | Lab 12 what-if study (betas, tornado, named cases, reverse DCF at the 21 Sep 2026 price). |
@@ -96,7 +96,8 @@ NVIDIA Forms 10-K FY2024–FY2026 (accessions 0001045810-24-000029, -25-000023, 
 FY2027 (-26-000052, -26-000075), the Q2 FY2027 earnings release (8-K -26-000073, 26 Aug 2026), SEC XBRL companyfacts
 for NVIDIA, AMD (CIK 0000002488) and Broadcom (CIK 0001730168), Nasdaq historical closes to 23 Sep 2026. Every
 material input, its locator, its type (fact / guidance / judgment / calculation) and an independent check is in
-[`docs/evidence-ledger.csv`](docs/evidence-ledger.csv). Nothing dated after 23 Sep 2026 is used.
+[`docs/evidence-ledger.csv`](docs/evidence-ledger.csv); one-time items, basis changes and mechanical checks on the base
+year are in [`docs/base-year-normalization.md`](docs/base-year-normalization.md). Nothing dated after 23 Sep 2026 is used.
 
 ## Financial conventions and assumptions
 

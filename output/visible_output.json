@@ -121,6 +121,18 @@
       "within_defended_bounds": false
     }
   },
+  "flip_scenario": [
+    {
+      "name": "Growth path alone, everything else at base",
+      "growth_shift": 0.2371899211257863,
+      "per_share": 225.50999999999996
+    },
+    {
+      "name": "Growth path on top of the high case (gross margin +1.5 pp, cost of equity 11%)",
+      "growth_shift": 0.1738888635332118,
+      "per_share": 225.5099999999999
+    }
+  ],
   "comps": {
     "nvda_pe": 28.509481668773702,
     "nvda_ev_ebit": 27.389403732178014,
@@ -165,8 +177,8 @@
     "Peer multiples use trailing GAAP figures; both peers carry large acquired-intangible amortisation, which depresses their GAAP earnings and inflates their multiples."
   ],
   "run": {
-    "timestamp": "2026-10-19T21:14:03-04:00",
-    "commit": "145e5d7",
+    "timestamp": "2026-10-19T21:22:29-04:00",
+    "commit": "fb23806",
     "python": "3.13.5",
     "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
   },

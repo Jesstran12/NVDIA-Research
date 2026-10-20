@@ -958,6 +958,41 @@
    "note": "outside the defended bounds (-0.02, 0.06); searched (-0.09, 0.06) to report what the price assumes"
   }
  },
+ "flip_scenario": [
+  {
+   "name": "Growth path alone, everything else at base",
+   "base_inputs": {},
+   "growth_shift": 0.2371899211257863,
+   "reachable": true,
+   "growth_path": [
+    0.4871899211257863,
+    0.3571899211257863,
+    0.3071899211257863,
+    0.2771899211257863
+   ],
+   "per_share": 225.50999999999996,
+   "valid": true,
+   "fy2031_revenue": 1350542.5736067377
+  },
+  {
+   "name": "Growth path on top of the high case (gross margin +1.5 pp, cost of equity 11%)",
+   "base_inputs": {
+    "gross_margin_shift": 0.015,
+    "cost_of_equity": 0.11
+   },
+   "growth_shift": 0.1738888635332118,
+   "reachable": true,
+   "growth_path": [
+    0.4238888635332118,
+    0.2938888635332118,
+    0.24388886353321182,
+    0.21388886353321182
+   ],
+   "per_share": 225.5099999999999,
+   "valid": true,
+   "fy2031_revenue": 1114912.0813430862
+  }
+ ],
  "comps": {
   "policy": {
    "frozen": "Policy carried from Lab 7-8 (frozen 25 Feb 2026) and re-dated to the 23 Sep 2026 valuation date; the rules below were fixed before the multiples were computed.",
@@ -1245,8 +1280,8 @@
   "Reverse DCF puts the disagreement in operating language: the price needs about +24 pp more growth in each of FY2028-FY2031 (a path near 49%, 36%, 31%, 28%), or a cost of equity near 8.0%, or terminal growth near 7.8%; no gross-margin or opex assumption inside the defended bounds reaches it."
  ],
  "run": {
-  "timestamp": "2026-10-19T21:14:03-04:00",
-  "commit": "145e5d7",
+  "timestamp": "2026-10-19T21:22:29-04:00",
+  "commit": "fb23806",
   "python": "3.13.5",
   "engine": "engine.py over nvda_proforma.py (Lab 10) and proforma.py (Lab 09)"
  }

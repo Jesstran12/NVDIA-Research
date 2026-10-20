@@ -64,6 +64,7 @@ def run_analysis(inputs=None, full=True):
     res['sensitivity'] = e.one_at_a_time()
     res['ranking_test'] = e.ranking_depends_on_ranges()
     res['reverse_dcf'] = e.reverse_dcf()
+    res['flip_scenario'] = e.flip_scenario()
     res['comps'] = e.comps()
     res['drivers'] = e.DRIVERS
     res['toggles'] = e.TOGGLES
@@ -205,14 +206,15 @@ def to_markdown(res):
         L.append(f"| {c['name']} | {c['story']} | {c['per_share']:,.2f} | {_m(c['fy2031_revenue'])} | {_m(c['fy2031_fcff'])} | {_p(c['terminal_share'])} | {'pass' if c['valid'] else 'FAIL: ' + ', '.join(c['checks_failed'])} |")
 
     g = res['grid']
-    L += ["", "## Cost of equity × terminal growth, $ per share (base in bold)", "",
-          "| Cost of equity \\ g | " + ' | '.join(_p(x) for x in g['growths']) + ' |', '|---|' + '---:|' * len(g['growths'])]
+    L += ["", "## WACC × terminal growth, $ per share (base in bold)", "",
+          "Rows are the cost-of-equity driver; the WACC it produces (debt weight 0.16%) is shown beside it.", "",
+          "| Cost of equity (WACC) \\ g | " + ' | '.join(_p(x) for x in g['growths']) + ' |', '|---|' + '---:|' * len(g['growths'])]
     for rate, row in zip(g['rates'], g['cells']):
         cells = []
         for gg, x in zip(g['growths'], row):
             s = 'invalid' if x is None else f'{x:,.1f}'
             cells.append(f'**{s}**' if abs(rate - 0.12) < 1e-9 and abs(gg - 0.03) < 1e-9 else s)
-        L.append(f"| {_p(rate)} | " + ' | '.join(cells) + ' |')
+        L.append(f"| {_p(rate)} ({_p(e.wacc_inputs(rate, res['assumptions']['tax_rate'])['wacc'], 2)}) | " + ' | '.join(cells) + ' |')
 
     s = res['sensitivity']
     L += ["", f"## One-at-a-time sensitivity at the defended bounds (base ${s['base_per_share']:,.2f})", "",
@@ -235,6 +237,16 @@ def to_markdown(res):
         sol = 'not reachable in ' + str(rr['bounds']) if rr.get('solved') is None else _fmt_driver_value(d_, rr['solved'])
         L.append(f"| {d_['label']} | {_fmt_driver_value(d_, d_['base'])} | {sol} | {'yes' if rr.get('within_defended_bounds') else 'no — ' + rr.get('note', '')} |")
 
+    L += ["", "## What would reverse the call — the smallest change that lifts value to the price", "",
+          "The downside cases cannot alter a do-not-initiate call; the scenario that would is on the upside. Each row is a full rerun with checks.", "",
+          "| Scenario | Growth shift needed | Resulting FY2028E–FY2031E path | FY2031E revenue | $/share | Checks |", "|---|---|---|---:|---:|---|"]
+    for f in res['flip_scenario']:
+        if f['reachable']:
+            L.append(f"| {f['name']} | {f['growth_shift'] * 100:+.1f} pp a year | {' / '.join(f'{g * 100:.0f}%' for g in f['growth_path'])} | {_m(f['fy2031_revenue'])} | {f['per_share']:,.2f} | {'pass' if f['valid'] else 'FAIL'} |")
+        else:
+            L.append(f"| {f['name']} | not reachable inside the defended bounds | — | — | — | — |")
+    L += ["", "Monitoring: the Q3 and Q4 FY2027 reports show whether Data Center growth is tracking the +17 pp path (about 42% in FY2028E) or the base 25%; "
+          "the call is reviewed on each report, with the tool re-run on the new filing."]
     c = res['comps']
     L += ["", "## Comparable companies (policy frozen before the numbers)", "", c['policy']['frozen'], ""]
     L += [f"- {rule}" for rule in c['policy']['rules']]
@@ -257,7 +269,7 @@ def to_markdown(res):
           "- FY2024-FY2026 10-Ks (accessions 0001045810-24-000029, -25-000023, -26-000021) for the history grid in nvda-proforma.md",
           "- Q1 and Q2 FY2027 10-Qs (0001045810-26-000052, -26-000075) and the Q2 FY2027 press release (8-K 0001045810-26-000073, 26 Aug 2026) for H1 actuals, the Q3 outlook and the share count",
           "- Peer figures: SEC XBRL companyfacts for AMD (CIK 0000002488) and Broadcom (CIK 0001730168), extracted to src/sec_xbrl/companyfacts_extract.csv; Nasdaq closes 23 Sep 2026 cached in src/beta_prices/",
-          "- Full evidence ledger: docs/evidence-ledger.csv"]
+          "- Full evidence ledger: docs/evidence-ledger.csv; base-year normalization (one-time items, basis changes, mechanical checks): docs/base-year-normalization.md"]
     return '\n'.join(L) + '\n'
 
 
@@ -281,6 +293,7 @@ def visible_output_json(res):
         cases=[dict(name=c['name'], per_share=c['per_share']) for c in res['cases']],
         sensitivity_ranking=[dict(driver=x['label'], span_per_share=x['span_per_share']) for x in res['sensitivity']['rows']],
         reverse_dcf={k: dict(solved=v.get('solved'), within_defended_bounds=v.get('within_defended_bounds')) for k, v in res['reverse_dcf'].items()},
+        flip_scenario=[dict(name=f['name'], growth_shift=f['growth_shift'], per_share=f['per_share']) for f in res['flip_scenario']],
         comps=dict(nvda_pe=res['comps']['nvda']['pe'], nvda_ev_ebit=res['comps']['nvda']['ev_ebit'],
                    peers=[dict(ticker=p['ticker'], pe=p.get('pe'), ev_ebit=p.get('ev_ebit'), disposition=p['disposition']) for p in res['comps']['peers']],
                    implied=res['comps']['implied']),

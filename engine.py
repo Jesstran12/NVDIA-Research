@@ -433,6 +433,23 @@ def cases():
     return out
 
 
+def flip_scenario():
+    """The smallest change that reverses the committee action (value >= price), the Week 7 open-ended challenge.
+    Searched two ways: the growth shift alone at base, and the growth shift on top of the high case's other
+    inputs (gross margin +1.5 pp, 11% cost of equity). Reported with the full rerun's checks."""
+    out = []
+    for name, base_inputs in (('Growth path alone, everything else at base', {}),
+                              ('Growth path on top of the high case (gross margin +1.5 pp, cost of equity 11%)',
+                               dict(gross_margin_shift=0.015, cost_of_equity=0.11))):
+        r = solve('growth_shift', base_inputs=base_inputs)
+        v = valuation({**base_inputs, 'growth_shift': r['solved']}) if r['reachable'] else None
+        out.append(dict(name=name, base_inputs=base_inputs, growth_shift=r.get('solved'), reachable=r['reachable'],
+                        growth_path=[g + r['solved'] for g in PF_BASE['growth'][1:]] if r['reachable'] else None,
+                        per_share=v['per_share'] if v else None, valid=v['valid'] if v else None,
+                        fy2031_revenue=v['years'][-1]['revenue'] if v else None))
+    return out
+
+
 def solve(key, target=MARKET['price'], base_inputs=None, lo=None, hi=None, iters=80):
     """Bisection on one driver, everything else at base: the value of `key` that prices the shares at `target`.
     Searches only inside the driver's bounds; reports 'not reachable' rather than returning a bound."""

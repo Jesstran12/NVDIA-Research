@@ -47,7 +47,11 @@ ties, base year reconciles to the 10-K, bridge reconciles, value falls monotonic
 
 **Cases (full reruns, never sums of shocks):** low $80 (growth path 15 / 2 / −3 / −6, gross margin −3 pp, opex +1 pp,
 13% cost of equity: capex digestion plus custom-silicon share loss) · base $124 · high $187 (growth 35 / 22 / 17 / 14,
-gross margin +1.5 pp, 11%: the cycle compounds and CUDA holds price).
+gross margin +1.5 pp, 11%: the cycle compounds and CUDA holds price). **What would reverse the call:** no downside
+case can; on the high case's margin and discount rate the growth path must still rise another 17 pp a year (about
+42 / 29 / 24 / 21%) before value reaches the price, and 24 pp a year on the base. Base-year contaminations (the 4.5bn
+H20 charge, 9.0bn of equity-stake gains, the 53-week FY2027, the segment re-cut, new notes, leases) and their
+treatment are in `docs/base-year-normalization.md`.
 
 **Cross-checks that disagree, not averaged:** NVIDIA trades at 28.5x trailing GAAP earnings and 27.4x trailing EBIT;
 Broadcom's 45.3x / 40.4x applied to NVIDIA imply $358 / $332; AMD's 158x / 153x are reported but not meaningful under the
